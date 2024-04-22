@@ -1,4 +1,3 @@
-import cssnano from 'cssnano';
 import { glob } from 'glob';
 import path from 'path';
 import { defineConfig } from 'vite';
@@ -27,7 +26,7 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       minify: 'terser',
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html']), cssnano()],
+    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
 
     resolve: {
       alias: {
