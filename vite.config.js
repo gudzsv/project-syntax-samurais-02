@@ -1,8 +1,9 @@
-import { glob } from 'glob'
-import { defineConfig } from 'vite'
-import FullReload from 'vite-plugin-full-reload'
-import injectHTML from 'vite-plugin-html-inject'
-
+import cssnano from 'cssnano';
+import { glob } from 'glob';
+import path from 'path';
+import { defineConfig } from 'vite';
+import FullReload from 'vite-plugin-full-reload';
+import injectHTML from 'vite-plugin-html-inject';
 export default defineConfig(({ command }) => {
   return {
     define: {
@@ -24,7 +25,15 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
+      minify: 'terser',
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+    plugins: [injectHTML(), FullReload(['./src/**/**.html']), cssnano()],
+
+    resolve: {
+      alias: {
+        '@public': path.resolve(__dirname, './public'),
+        '@partials': path.resolve(__dirname, './src/partials'),
+      },
+    },
   };
 });

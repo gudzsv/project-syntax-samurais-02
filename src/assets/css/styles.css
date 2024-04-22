@@ -1,0 +1,15 @@
+@import 'modern-normalize/modern-normalize.css';
+@import url('./fonts.css');
+@import url('./reset.css');
+@import url('./base.css');
+
+@import url('@partials/header/header.css');
+@import url('@partials/hero/hero.css');
+@import url('@partials/about-me/about-me.css');
+@import url('@partials/benefits/benefits.css');
+@import url('@partials/projects/projects.css');
+@import url('@partials/faq/faq.css');
+@import url('@partials/covers/covers.css');
+@import url('@partials/reviews/reviews.css');
+@import url('@partials/work-together/work-together.css');
+@import url('@partials/footer/footer.css');
