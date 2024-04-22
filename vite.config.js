@@ -24,7 +24,7 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
-      minify: 'terser',
+      minify: 'esbuild',
     },
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
 
