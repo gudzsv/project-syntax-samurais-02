@@ -1,15 +1,19 @@
-
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter Tight', sans-serif;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  background-color: var(--black);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--Main_text);
+  background-color: var(--Background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 section {
@@ -22,7 +26,7 @@ section {
   min-width: 320px;
   max-width: 375px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -38,7 +42,7 @@ section {
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding: 0 100px;
+    /* padding: 0 100px; */
   }
 }
 
