@@ -11,7 +11,8 @@
   "devDependencies": {
     "glob": "^10.3.12",
     "path": "^0.12.7",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-svg-sprite": "^0.5.1"
   },
   "dependencies": {
     "accordion-js": "^3.3.4",

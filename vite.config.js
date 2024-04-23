@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    publicDir: '../public',
     build: {
       sourcemap: true,
 
