@@ -5,6 +5,7 @@ import '@partials/faq';
 import '@partials/footer';
 import '@partials/header';
 import '@partials/hero';
+import '@partials/modal';
 import '@partials/projects';
 import '@partials/reviews';
 import '@partials/work-together';

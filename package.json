@@ -14,8 +14,12 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "accordion-js": "^3.3.4",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
+    "izitoast": "^1.4.0",
     "modern-normalize": "^2.0.0",
+    "swiper": "^11.1.1",
     "vite-plugin-full-reload": "^1.1.0",
     "vite-plugin-html-inject": "^1.1.2"
   },
