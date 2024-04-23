@@ -1,21 +1,11 @@
-:root {
-  /* colors */
-  --white: #fff;
-  --brown: #bea69e;
-  --fill: #1d1d1d;
-  --black: #121212;
-  --fill-linear: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
-  --gray-light: rgba(255, 255, 255, 0.5);
-  --gray: rgba(255, 255, 255, 0.2);
-  --dark: #414141;
-}
+
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--white);

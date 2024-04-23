@@ -1,0 +1,62 @@
+:root {
+  /* colors */
+  --Background: #1c1d20;
+  --Cards: #242527;
+  --Arrow: #3b3b3b;
+  --Button_text: #ed3b44;
+  --Button_background: #e0373f;
+  --Main_text: #fafafa;
+  --Main_text_20_opacity: rgba(250, 250, 250, 0.2);
+  --Success_message: #3cbc81;
+  --Error_message: #e74a3b;
+
+  /* theme colors */
+  --Theme_red: #ed3b44;
+  --Lg_red: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #69292d 67.71%,
+    #ed3b44 99.91%
+  );
+
+  --Theme_green: #c6e327;
+  --Lg_green: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #596808 67.71%,
+    rgba(198, 227, 39, 0.76) 99.91%
+  );
+
+  --Theme_blue: #0041e8;
+  --Lg_blue: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #001958 67.71%,
+    #0041e8 99.91%
+  );
+
+  --Theme_coral: #e6533c;
+  --Lg_coral: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #9f3626 67.71%,
+    #e6533c 99.91%
+  );
+
+  --Theme_dark_green: #2b4441;
+  --Lg_dark_green: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #1e3633 67.71%,
+    #2b4441 99.91%
+  );
+
+  --Theme_orange: #ff7f08;
+  --Lg_orange: linear-gradient(
+    90deg,
+    #1c1d20 49.69%,
+    #ac5300 67.71%,
+    #ff7f08 99.91%,
+    #ff7f08 99.91%
+  );
+}
