@@ -33,6 +33,7 @@ export default defineConfig(({ command }) => {
       alias: {
         '@public': path.resolve(__dirname, './public'),
         '@partials': path.resolve(__dirname, './src/partials'),
+        '@assets': path.resolve(__dirname, './src/assets'),
       },
     },
   };
