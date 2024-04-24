@@ -11,7 +11,9 @@ File name should be: `pullrequests-list.txt`
 
 > [Maket Figma](https://www.figma.com/file/fww6BUe77KIm14vo9i8Agm/Portfolio?type=design&node-id=2-9&mode=design&t=zcCmVU4iSoP0lhae-0)
 
-> Технічне Завдання [ТЗ](https://docs.google.com/spreadsheets/d/1azRSKj2AE0FayFVo_DkUqr6e6ZNelDiPhDzbWWYX3uc/edit#gid=0)
+> [Technical Task](https://docs.google.com/spreadsheets/d/1azRSKj2AE0FayFVo_DkUqr6e6ZNelDiPhDzbWWYX3uc/edit#gid=0)
+
+> [Trello](https://trello.com/b/uaiWkcM0/blended-js-project)
 
 > [Branch naming link to video](https://www.youtube.com/watch?v=-2lFpVjdXEg&list=PLViULGko0FdhZ99yYnqB64F_4nVyvOPH5&index=14)
 ![alt text](./assets/img/image-1.png)
