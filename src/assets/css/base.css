@@ -16,10 +16,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-section {
+/* section {
   min-width: 320px;
   width: 100%;
-}
+} */
 
 /* Mobile */
 .container {
@@ -39,12 +39,12 @@ section {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    /* padding: 0 100px; */
+    padding: 0 100px;
   }
-}
+} */
 
 /* Big Desktop */
 @media only screen and (min-width: 1440px) {

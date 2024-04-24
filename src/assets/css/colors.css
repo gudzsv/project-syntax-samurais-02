@@ -6,7 +6,10 @@
   --Button_text: #ed3b44;
   --Button_background: #e0373f;
   --Main_text: #fafafa;
-  --Main_text_20_opacity: rgba(250, 250, 250, 0.2);
+  --Opacity_10: rgba(250, 250, 250, 0.1);
+  --Opacity_20: rgba(250, 250, 250, 0.2);
+  --Opacity_40: rgba(250, 250, 250, 0.4);
+  --Opacity_60: rgba(250, 250, 250, 0.6);
   --Success_message: #3cbc81;
   --Error_message: #e74a3b;
 
