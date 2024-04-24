@@ -5,8 +5,9 @@ html {
 body {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 500;
+  letter-spacing: -0.02em;
   color: var(--Main_text);
   background-color: var(--Background);
   font-synthesis: none;
@@ -16,10 +17,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* section {
-  min-width: 320px;
-  width: 100%;
-} */
+/* Mobile/Main text */
+.main-text-with-opacity {
+  color: var(--Opacity_60);
+}
 
 /* Mobile */
 .container {
@@ -39,14 +40,6 @@ body {
 }
 
 /* Desktop */
-/* @media only screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    padding: 0 100px;
-  }
-} */
-
-/* Big Desktop */
 @media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
@@ -54,124 +47,116 @@ body {
 }
 
 /* Mobile */
-.section-mt {
-  padding-top: 80px;
+.section-pb {
+  padding-bottom: 64px;
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-  .section-mt {
-    padding-top: 100px;
+  .section-pb {
+    padding-bottom: 96px;
   }
 }
 
-/* Desktop - Big Desktop */
-@media only screen and (min-width: 1280px) {
-  .section-mt {
-    padding-top: 150px;
+/* Desktop*/
+@media only screen and (min-width: 1440px) {
+  .section-pb {
+    padding-bottom: 164px;
   }
 }
 
-/* Mobile */
-.signup-btn {
-  display: inline-block;
-  padding: 14px 62px;
-  min-width: 179px;
-  color: var(--black);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.28;
+/* Mobile/H1 */
+.header-1 {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-  border-radius: 12px;
-  background-color: var(--white);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Tablet */
+/* Desktop_Tablet/H1 */
 @media only screen and (min-width: 768px) {
-  .signup-btn {
-    min-width: 186px;
-    padding: 16px 58px;
-    font-size: 18px;
-    line-height: 1.55;
+  .header-1 {
+    font-size: 90px;
   }
 }
 
-/* Desktop */
-@media only screen and (min-width: 1280px) {
-  .signup-btn {
-    min-width: 238px;
-    padding-left: 84px;
-    padding-right: 84px;
-  }
-}
-
-.signup-btn:hover,
-.signup-btn:focus,
-.signup-btn:active {
-  color: var(--brown);
-  background-color: var(--fill);
-}
-
-/* Mobile */
-.bold-title {
-  color: var(--white);
+/* Mobile/H2 */
+.header-2 {
   font-size: 40px;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
-/* Tablet  */
+/* Desktop_Tablet/H2 */
 @media only screen and (min-width: 768px) {
-  .bold-title {
-    font-size: 60px;
-    line-height: 1.07;
-  }
-}
-
-/* Desktop - Big Desktop */
-@media only screen and (min-width: 1280px) {
-  .bold-title {
+  .header-2 {
     font-size: 64px;
-    line-height: 1.06;
   }
 }
 
-/* Mobile */
-.medium-title {
-  color: var(--white);
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: -0.04em;
+/* Mobile/H3 */
+.header-3 {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
-/* Tablet - Desktop - Big Desktop */
+/* Desktop_Tablet/H3 */
 @media only screen and (min-width: 768px) {
-  .medium-title {
-    font-size: 48px;
-    line-height: 1.12;
+  .header-3 {
+    font-size: 38px;
+    line-height: 1.05;
   }
 }
 
-/* Mobile - Tablet - Desktop - Big Desktop */
-.slim-title {
-  color: var(--white);
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.14;
+/* Mobile/H4 */
+.header-4 {
+  color: var(--Background);
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
 }
 
-.text-decoration {
-  color: var(--brown);
+/* Desktop_Tablet/H4 */
+@media only screen and (min-width: 768px) {
+  .header-4 {
+    font-size: 44px;
+    line-height: 1;
+  }
 }
 
-.text-decoration-italic {
-  color: var(--brown);
-  font-weight: 400;
-  font-style: italic;
+/* Mobile/H5 */
+.header-5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* Desktop_Tablet/H5 */
+@media only screen and (min-width: 768px) {
+  .header-5 {
+    font-size: 44px;
+    line-height: 1;
+  }
+}
+
+.section-title {
+  color: var(--Opacity_40);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text-decoration-red {
+  color: var(--Theme_red);
+}
+
+.text-decoration-gray {
+  color: var(--Opacity_40);
 }
 
 .visually-hidden {
