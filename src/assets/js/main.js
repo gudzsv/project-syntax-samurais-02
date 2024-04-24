@@ -2,7 +2,6 @@ import '@partials/about-me';
 import '@partials/benefits';
 import '@partials/covers';
 import '@partials/faq';
-import '@partials/footer';
 import '@partials/header';
 import '@partials/hero';
 import '@partials/modal';
