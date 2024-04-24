@@ -1,3 +1,13 @@
 .header {
   background-color: red;
 }
+
+.header-img-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-image {
+  width: 80px;
+  height: 80px;
+}
