@@ -1,9 +1,9 @@
 .header {
-  background-color: red;
+  /* background-color: rgb(252, 250, 250); */
   
 }
 
-.container {
+.header-container {
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -16,11 +16,12 @@
 }
 
 .header-image {
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: auto;
 }
 
-.header-name {
-  width: 84px;
-  height: 19px;
+.name-icon {
+  /* width: 84px;
+  height: 19px; */
+  /* stroke: #fff; */
 }

@@ -1,23 +1,26 @@
-<header class="header">HEADER</header>
-<div class="container">
-  <div class="header-img-box">
-    <img
-      class="header-image"
-      src="/src/assets/img/header/myphoto1x.png"
-      alt="My photo"
-      width="80"
-      height="80"
-    />
-    <!-- <h2 class="header-name">jefferson</h2> -->
-    <img
-      src="/src/assets/img/header/jefferson_.svg"
-      alt=""
-      width="84"
-      height="19"
-    />
-  </div>
-  <div class=""><button class="burger-btn" type="button"></button></div>
-</div>
+<header>
+  <div class="header-container">
+    
+    <div class="header-img-box">
+        <picture>
 
-<!-- Burger  -->
-<div class="backdrop"></div>
+        </picture>
+        <img class="header-image" 
+        srcset="
+        ../../assets/img/logo/image_1x.webp 1x,
+        ../../assets/img/logo/image_2x.webp 2x"
+        src="../../assets/img/logo/image_1x.webp" 
+        alt="logo" 
+        width="80" 
+        height="80" />
+
+      <svg class="name-icon" width="84" height="19">
+        <use href="../../assets/svg/icons.svg#icon-jefferson"></use>
+    </svg>
+    </div>
+    <!-- <div class=""><button class="burger-btn" type="button"></button></div> -->
+  </div>
+
+  <!-- Burger  -->
+  <!-- <div class="backdrop"></div> -->
+</header>
