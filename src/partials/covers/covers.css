@@ -1,3 +1,60 @@
 .covers {
-  background-color: seagreen;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  height: 508px;
+}
+
+.marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: -30px;
+  right: -800px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Background);
+  background-image: url(../../assets/img/covers/elements_vectors_1x.webp);
+  background-size: cover;
+}
+
+@media (min-resolution: 192dpi) {
+  .marquee {
+    background-image: url(../../assets/img/covers/elements_vectors_2x.webp);
+  }
+}
+.marquee__inner {
+  display: flex;
+  gap: 24px;
+  transform: rotate(17deg);
+}
+.marquee-wrapper {
+  height: 100%;
+}
+.marquee__card {
+  display: block;
+  flex-shrink: 0;
+  width: 282px;
+  height: 162px;
+  object-fit: cover;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.marquee-foto {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-190%);
+  }
 }
