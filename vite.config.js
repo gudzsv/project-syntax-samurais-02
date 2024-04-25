@@ -11,7 +11,6 @@ export default defineConfig(({ command }) => {
     publicDir: '../public',
     build: {
       sourcemap: true,
-
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -27,7 +26,6 @@ export default defineConfig(({ command }) => {
       minify: 'esbuild',
     },
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
-
     resolve: {
       alias: {
         '@public': new URL('./public', import.meta.url).pathname,
