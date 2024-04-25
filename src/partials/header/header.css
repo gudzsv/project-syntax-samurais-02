@@ -3,10 +3,11 @@
   
 }
 
-.header-container {
+.container {
   display: flex;
   flex-direction: row;
   margin: 0;
+  padding-top: 32px;
 
 }
 
