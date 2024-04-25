@@ -35,5 +35,11 @@
 <symbol id="icon-hourglass" viewBox="0 0 32 32">
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24.217 2.667h-16.435c-0.616 0-1.116 0.5-1.116 1.116v0c0 0 0 0 0 0 0 3.7 1.5 7.050 3.924 9.474l1.627 1.627c0.16 0.16 0.241 0.241 0.299 0.32 0.165 0.219 0.264 0.496 0.264 0.797s-0.099 0.577-0.267 0.8l0.002-0.003c-0.095 0.116-0.193 0.221-0.297 0.318l-0.002 0.002-1.627 1.625c-2.424 2.425-3.924 5.775-3.924 9.474 0 0 0 0 0 0v-0c0 0.616 0.5 1.116 1.116 1.116h16.435c0.616 0 1.116-0.5 1.116-1.116v0c0-0 0-0 0-0 0-3.7-1.5-7.050-3.924-9.474l-1.627-1.627c-0.16-0.16-0.241-0.241-0.299-0.32-0.165-0.219-0.264-0.496-0.264-0.797s0.099-0.577 0.267-0.8l-0.002 0.003c0.057-0.077 0.137-0.157 0.299-0.32l1.627-1.625c2.424-2.425 3.924-5.775 3.924-9.474 0-0 0-0 0-0v0c0-0.616-0.5-1.116-1.116-1.116v0z"></path>
 </symbol>
+<symbol id="icon-arrow-about-me" viewBox="0 0 32 32">
+<path fill="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556" d="M24 20l-8-8-8 8"></path>
+</symbol>
+<symbol id="icon-arrow-narrow-right-about-me" viewBox="0 0 33 32">
+<path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M6 16h21.333M19.333 8l8 8-8 8"></path>
+</symbol>
 </defs>
 </svg>
