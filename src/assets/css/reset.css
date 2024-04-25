@@ -34,7 +34,6 @@ button {
 input {
   border-style: none;
   background-color: transparent;
-  outline-offset: 2px;
 }
 
 img {
