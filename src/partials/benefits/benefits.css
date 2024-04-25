@@ -20,7 +20,6 @@
   }
 }
 
-
 .benefits-items-list{
   border-radius: 20px;
   padding: 24px;
@@ -56,7 +55,6 @@
     justify-content: right;
     margin-left: 500px;
     
-
  }
   }  
 .icon-wrapper {
@@ -71,23 +69,9 @@
   margin-bottom: 64px;
 }
 
-
-/* header-5 */
 .title {
   margin-bottom: 8px;
 }
-
-
-
-/* main text with opacity */
-/* .benefits-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
-} */
 
 .button-wrapper {
   display: flex;
@@ -104,8 +88,13 @@
   color: #FAFAFA;
 }
 
+.button-wrapper:hover {
+  color: #FAFAFA;
+  border: 1.5px solid var(--Main_text)
+}
+
 @media screen and (min-width: 1440px) {
   .button-wrapper {
     margin-left: 49%;
   }
-}
+} 
