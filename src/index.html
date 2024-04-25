@@ -14,7 +14,22 @@
     <meta name="author" content="Syntax Samurais" />
     <link rel="shortcut icon" href="/favicon_j.svg" type="image/svg+xml" />
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="preload"
+      href="./assets/fonts/InterTight-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/InterTight-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <title>Portfolio</title>
   </head>
   <body>
@@ -30,6 +45,10 @@
     </main>
     <load src="partials/work-together/work-together.html" />
     <load src="partials/modal/modal.html" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
