@@ -27,6 +27,13 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+input {
+  border-style: none;
+  background-color: transparent;
 }
 
 img {
