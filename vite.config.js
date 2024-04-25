@@ -1,5 +1,4 @@
 import { glob } from 'glob';
-import path from 'path';
 import { defineConfig } from 'vite';
 import FullReload from 'vite-plugin-full-reload';
 import injectHTML from 'vite-plugin-html-inject';
@@ -12,7 +11,6 @@ export default defineConfig(({ command }) => {
     publicDir: '../public',
     build: {
       sourcemap: true,
-
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -28,11 +26,11 @@ export default defineConfig(({ command }) => {
       minify: 'esbuild',
     },
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
-
     resolve: {
       alias: {
-        '@public': path.resolve(__dirname, './public'),
-        '@partials': path.resolve(__dirname, './src/partials'),
+        '@public': new URL('./public', import.meta.url).pathname,
+        '@partials': new URL('./src/partials', import.meta.url).pathname,
+        '@assets': new URL('./src/assets', import.meta.url).pathname,
       },
     },
   };

@@ -10,13 +10,10 @@
   },
   "devDependencies": {
     "glob": "^10.3.12",
-    "path": "^0.12.7",
-    "vite": "^5.2.0",
-    "vite-plugin-svg-sprite": "^0.5.1"
+    "vite": "^5.2.0"
   },
   "dependencies": {
     "accordion-js": "^3.3.4",
-    "aos": "^2.3.4",
     "axios": "^1.6.8",
     "izitoast": "^1.4.0",
     "modern-normalize": "^2.0.0",

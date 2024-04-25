@@ -1,3 +1,120 @@
 .hero {
-  background-color: rosybrown;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-image: url('@assets/img/hero/hero_red_mobile_1x.webp');
+  @media (min-resolution: 2dppx) {
+    background-image: url('@assets/img/hero/hero_red_mobile_2x.webp');
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: url('@assets/img/hero/hero_red_tablet_1x.webp');
+    @media (min-resolution: 2dppx) {
+      background-image: url('@assets/img/hero/hero_red_tablet_2x.webp');
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    background-image: url('@assets/img/hero/hero_red_desktop_1x.webp');
+    @media (min-resolution: 2dppx) {
+      background-image: url('@assets/img/hero/hero_red_desktop_2x.webp');
+    }
+  }
+}
+
+.hero-wrapper {
+  padding-block: 32px;
+}
+
+.hero-title {
+  text-align: start;
+  margin: 246px auto 227px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    text-align: start;
+    margin: 188px auto 187px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-title {
+    text-align: start;
+    margin: 188px auto 243px;
+    width: 1140px;
+  }
+}
+
+.hero-info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-item {
+  border-radius: 60px;
+  border: 1px solid var(--Opacity_20);
+  transition: border-color var(--Animation_cubic);
+}
+
+.hero-item:hover,
+.hero-item:focus,
+.hero-item:active {
+  border-color: var(--Main_text);
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 37px;
+  min-height: 37px;
+}
+
+@media only screen and (min-width: 768px) {
+  .social-link {
+    min-width: 55px;
+    min-height: 55px;
+  }
+}
+
+.heder-contact-info {
+  border-radius: 60px;
+  border: 1px solid var(--Opacity_20);
+  transition: border-color var(--Animation_cubic);
+}
+
+.heder-contact-info:hover,
+.heder-contact-info:focus,
+.heder-contact-info:active {
+  border-color: var(--Main_text);
+}
+
+.heder-contact-info-link {
+  display: flex;
+  min-width: 178px;
+  min-height: 37px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .heder-contact-info-link {
+    min-width: 223px;
+    min-height: 55px;
+  }
 }
