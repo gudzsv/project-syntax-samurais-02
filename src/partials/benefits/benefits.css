@@ -4,7 +4,6 @@
 }
 
 .benefits-section-title {
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -25,6 +24,11 @@
   padding: 24px;
   background: #242527;
   margin-bottom: 16px;
+}
+
+.benefits-items-list:hover {
+  box-shadow: 0 14px 15px var(--Theme_red);
+  transition: box-shadow 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -81,16 +85,15 @@
   padding: 18px 36px;
   width: 190px;
   height: 55px;
-  font-family: "Inter", sans-serif;;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #FAFAFA;
+  transition: border-color var(--Animation_cubic);
 }
 
 .button-wrapper:hover {
-  color: #FAFAFA;
-  border: 1.5px solid var(--Main_text)
+  border-color: 1.5px solid var(--Main_text);
 }
 
 @media screen and (min-width: 1440px) {
