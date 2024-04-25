@@ -1,3 +1,56 @@
-.work-together {
-  background-color: darkcyan;
+.title-image {
+  width: 70px;
+  height: auto;
+}
+.title-work-together {
+}
+.accent-text {
+}
+.submit-form {
+}
+.input {
+  outline: none;
+  background-color: transparent;
+  border-style: none;
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid var(--Opacity_20);
+  color: var(--Main_text);
+  text-overflow: ellipsis;
+}
+
+.input:user-valid {
+  border-color: var(--Success_message);
+}
+
+.input:user-invalid {
+  border-color: var(--Error_message);
+}
+
+.send-btn {
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  background-color: var(--Button_text);
+  color: var(--Main_text);
+}
+.contacts {
+}
+.contacts-list {
+}
+.contacts-item {
+  /* text-align: center; */
+  width: fit-content;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid var(--Opacity_20);
+  border-radius: 60px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
 }

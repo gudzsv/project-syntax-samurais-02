@@ -1,1 +1,59 @@
-<footer class="work-together">WORK_TOGETHER</footer>
+<footer class="work-together section-pb">
+  <div class="container">
+    <picture class="title-image">
+      <source
+        srcset="
+          ../../assets/img/work-togeter/image_mobile_1x.webp 1x,
+          ../../assets/img/work-togeter/image_mobile_2x.webp 2x
+        "
+        media="(max-width: 1439px)"
+      />
+      <source
+        srcset="
+          ../../assets/img/work-togeter/image_tabl_desk_1x.webp 1x,
+          ../../assets/img/work-togeter/image_tabl_desk_2x.webp 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <img
+        src="../../assets/img/work-togeter/image_mobile_1x.webp"
+        alt="Man's photo"
+        width="44"
+        height="44"
+      />
+    </picture>
+    <h2 class="title-work-together header-2">
+      Let’s <span class="text-decoration-red">work</span> together
+    </h2>
+    <form class="submit-form js-submit-form" autocomplete="off">
+      <input
+        type="email"
+        class="input"
+        name="userEmail"
+        id="user-email"
+        placeholder="clients@gmail.com"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        required
+      />
+      <input
+        type="text"
+        class="input"
+        name="userComments"
+        id="user-comments"
+        placeholder="comments"
+        required
+      />
+      <button class="send-btn" type="submit">Send</button>
+    </form>
+    <address class="contacts">
+      <ul class="contacts-list">
+        <li class="contacts-item">
+          <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="contacts-item">
+          <a href="tel:+3801111111111">+380 11 1111 11 11</a>
+        </li>
+      </ul>
+    </address>
+  </div>
+</footer>
