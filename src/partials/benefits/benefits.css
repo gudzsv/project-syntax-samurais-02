@@ -71,29 +71,23 @@
   margin-bottom: 64px;
 }
 
-.benefits-icon {
-  
-}
 
-.benefits-list-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  color: var(--main-text);
+/* header-5 */
+.title {
   margin-bottom: 8px;
-  gap: 16px;
 }
 
-.benefits-text {
+
+
+/* main text with opacity */
+/* .benefits-text {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-}
+} */
 
 .button-wrapper {
   display: flex;
