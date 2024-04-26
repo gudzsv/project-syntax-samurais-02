@@ -1,3 +1,157 @@
+:root {
+  --Animation_arrow: 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .about-me {
-  background-color: antiquewhite;
+  padding: 64px 0px;
+}
+
+.about-me .container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me .container {
+    gap: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me .container {
+    gap: 96px;
+  }
+}
+
+.about-me-wrapper-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-me-content,
+.about-me-img-wrapper {
+  background: var(--Cards);
+  border-radius: 24px;
+}
+
+.about-me-content {
+  height: 500px;
+  padding: 32px;
+}
+
+.about-me-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me-img {
+  border-radius: 24px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-wrapper-content {
+    flex-direction: row;
+  }
+  .about-me-wrapper-content > div {
+    width: calc((100% - 16px) / 2);
+  }
+  .about-me-content {
+    height: 700px;
+  }
+}
+
+.about-me-chapter {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.about-me-btn,
+.about-me-btn-swipe {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.about-me-btn {
+  width: 36px;
+  height: 36px;
+  color: var(--Main_text);
+  border-radius: 100px;
+  border: 1px solid var(--Opacity_20);
+  transition: all var(--Animation_cubic);
+}
+
+.about-me-btn:hover,
+.about-me-btn:focus,
+.about-me-btn:active {
+  border-color: var(--Button_background);
+  color: var(--Button_background);
+}
+
+.about-me-btn-swipe {
+  color: var(--Arrow);
+  width: 28px;
+  height: 28px;
+  transition: all var(--Animation_arrow);
+}
+
+.about-me-btn-swipe:hover,
+.about-me-btn-swipe:focus,
+.about-me-btn-swipe:active {
+  color: var(--Button_text);
+  transform: translateX(-20%) scale(1.1);
+}
+
+.about-me-btn-icon {
+  stroke: currentColor;
+}
+
+.about-me-list-item {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--Opacity_20);
+}
+
+.about-me-list-item:not(:first-child) {
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-list-item:not(:first-child) {
+    padding-top: 32px;
+  }
+}
+
+.about-me-list-item ul,
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-list-item ul {
+  gap: 10px;
+}
+
+.about-me-text {
+  gap: 32px;
+}
+
+.about-me-list-skills-item {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 1px solid var(--Opacity_20);
+  flex-shrink: 0;
 }
