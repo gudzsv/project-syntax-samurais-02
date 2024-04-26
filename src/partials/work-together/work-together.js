@@ -40,6 +40,7 @@ async function onSubmit(event) {
     resetData();
   } catch (error) {
     // izitoast
+    console.error(error);
   }
 }
 
