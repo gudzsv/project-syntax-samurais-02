@@ -2,15 +2,18 @@
    768px Tablet Adaptive
    1440px Desktop */
 
-.header {
-  /* background-color: rgb(252, 250, 250); */
+header {
+  
 }
 
-.container {
+.header-container {
   display: flex;
   flex-direction: row;
-
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   padding-top: 32px;
+  
 }
 
 @media only screen and (max-width: 375px) {
@@ -31,11 +34,25 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
 .header-image {
   width: auto;
   height: auto;
+}
+
+.name-icon {
+  width: 84px;
+  height: 19px;
+  position: absolute;
+}
+
+.name-icon:hover {
+  width: 93px;
+  height: 24px;
+  transition: width 250ms ease;
 }
 
 .burger-btn-box {
@@ -64,10 +81,15 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    flex-direction: column;
+    animation-duration: 1s;
+    animation-name: slidein;
   }
 }
 
 .menu-link {
+  display: flex;
+  justify-content: center;
   color: rgb(250, 250, 250);
   font-family: 'Inter Tight';
   font-size: 16px;
@@ -75,10 +97,39 @@
   line-height: 1.19;
   letter-spacing: -0.02em;
   text-decoration: underline;
+  
+}
+
+.menu-link:hover {
+  color: rgb(237, 59, 68);
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .order-btn {
   display: none;
+}
+
+.order-btn:hover {
+  background: rgb(224, 55, 63);
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,6 +139,7 @@
     height: 56px;
     padding: 18px 24px 18px 24px;
     border-radius: 60px;
+    color: rgb(250, 250, 250);
     background: rgb(237, 59, 68);
     margin-left: auto;
     font-family: 'Inter Tight';
@@ -95,5 +147,19 @@
     font-weight: 500;
     line-height: 1.19;
     letter-spacing: -0.02em;
+    animation-duration: 1s;
+    animation-name: slidein;
+  
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
