@@ -135,20 +135,12 @@ body {
   }
 }
 
-/* Mobile/H5 */
+/* Mobile_Desktop_Tablet/H5 */
 .header-5 {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.02em;
-}
-
-/* Desktop_Tablet/H5 */
-@media only screen and (min-width: 768px) {
-  .header-5 {
-    font-size: 44px;
-    line-height: 1;
-  }
 }
 
 .section-title {
