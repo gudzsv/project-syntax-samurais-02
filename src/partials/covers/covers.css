@@ -9,26 +9,25 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
   position: absolute;
-  top: -30px;
+  top: -280px;
   right: -800px;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: -50px;
   background-color: var(--Background);
-  background-image: url(../../assets/img/covers/elements_vectors_1x.webp);
+  background-image: url(/assets/img/covers/elements_vectors_1x.webp);
   background-size: cover;
 }
 
 @media (min-resolution: 192dpi) {
   .marquee {
-    background-image: url(../../assets/img/covers/elements_vectors_2x.webp);
+    background-image: url(/assets/img/covers/elements_vectors_2x.webp);
   }
 }
 .marquee__inner {
   display: flex;
   gap: 24px;
-  transform: rotate(17deg);
+  transform: rotate(-16deg);
 }
 .marquee-wrapper {
   height: 100%;
@@ -39,6 +38,8 @@
   width: 282px;
   height: 162px;
   object-fit: cover;
+}
+.animation {
   animation-name: marqueeLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
@@ -58,3 +59,22 @@
     transform: translateX(-190%);
   }
 }
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .covers {
+    height: 960px;
+  }
+  .marquee {
+    gap: 44px;
+  }
+  .marquee__card {
+    width: 544px;
+    height: 314px;
+  }
+}
+
+/* Desktop */
+/* @media only screen and (min-width: 1440px) {
+ 
+} */
