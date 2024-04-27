@@ -2,10 +2,6 @@
    768px Tablet Adaptive
    1440px Desktop */
 
-header {
-  
-}
-
 .header-container {
   display: flex;
   flex-direction: row;
@@ -13,20 +9,14 @@ header {
   left: 50%;
   transform: translateX(-50%);
   padding-top: 32px;
-  
 }
 
 @media only screen and (max-width: 375px) {
-  .container {
+  .header-container {
     display: flex;
     flex-direction: row;
     margin: 0;
     padding-top: 32px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
   }
 }
 
@@ -70,6 +60,8 @@ header {
   background-color: transparent;
   border: none;
   padding: 0;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
 .menu-box {
@@ -97,7 +89,6 @@ header {
   line-height: 1.19;
   letter-spacing: -0.02em;
   text-decoration: underline;
-  
 }
 
 .menu-link:hover {
@@ -115,7 +106,6 @@ header {
   padding: 0;
   overflow: hidden;
   clip-path: inset(50%);
-  
 }
 
 .menu-list {
@@ -149,7 +139,6 @@ header {
     letter-spacing: -0.02em;
     animation-duration: 1s;
     animation-name: slidein;
-  
   }
 }
 
