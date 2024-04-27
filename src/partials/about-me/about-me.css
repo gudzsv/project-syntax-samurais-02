@@ -6,6 +6,11 @@
   padding: 64px 0px;
 }
 
+.about-me .ac-panel {
+  overflow: hidden;
+  padding-top: 12px;
+}
+
 .about-me .container {
   display: flex;
   flex-direction: column;
@@ -67,7 +72,6 @@
 
 .about-me-chapter {
   display: flex;
-  margin-bottom: 12px;
 }
 
 .about-me-btn,
@@ -91,9 +95,11 @@
   transition: all var(--Animation_cubic);
 }
 
-.about-me-btn:hover,
-.about-me-btn:focus,
-.about-me-btn:active {
+.about-me-btn.btn-active {
+  transform: rotate(180deg);
+}
+
+.about-me-btn:hover {
   border-color: var(--Button_background);
   color: var(--Button_background);
 }
