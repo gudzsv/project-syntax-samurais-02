@@ -1,3 +1,39 @@
+.work-together {
+  padding-block-end: 32px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-blend-mode: overlay;
+  background-image: url('@assets/img/work-togeter/glass_effect_2_mobile_1x.webp');
+  @media (min-resolution: 2dppx) {
+    background-image: url('@assets/img/work-togeter/glass_effect_2_mobile_2x.webp');
+  }
+}
+@media only screen and (min-width: 768px) {
+  .work-together {
+    padding-block-end: 169px;
+    background-image: url('@assets/img/work-togeter/glass_effect_2_tablet_1x.webp');
+    @media (min-resolution: 2dppx) {
+      background-image: url('@assets/img/work-togeter/glass_effect_2_tablet_2x.webp');
+    }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .work-together {
+    background-image: url('@assets/img/work-togeter/glass_effect_2_desktop_1x.webp');
+    @media (min-resolution: 2dppx) {
+      background-image: url('@assets/img/work-togeter/glass_effect_2_desktop_2x.webp');
+    }
+  }
+}
+.work-together .container {
+  padding-block-start: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .work-together .container {
+    padding-block-start: 80px;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .work-together .container {
     padding-inline-start: 196px;
@@ -9,12 +45,10 @@
   align-items: center;
   gap: 8px;
   max-width: 542px;
-  margin-block-start: 32px;
   margin-block-end: 63px;
 }
 @media only screen and (min-width: 768px) {
   .title-work-together {
-    margin-block-start: 80px;
     margin-block-end: 18px;
   }
 }
@@ -29,7 +63,7 @@
   }
 }
 .submit-form {
-  margin-block-end: 63px;
+  margin-block-end: 64px;
 }
 @media only screen and (min-width: 768px) {
   .submit-form {
@@ -44,9 +78,6 @@
 @media only screen and (min-width: 1440px) {
   .submit-form {
     margin-block-end: 18px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
   }
 }
 .input {
@@ -114,8 +145,6 @@
   .send-btn {
     margin-inline-start: 68px;
   }
-}
-.contacts {
 }
 .contacts-list {
   display: flex;
