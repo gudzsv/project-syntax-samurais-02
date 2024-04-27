@@ -14,7 +14,7 @@ inputComments.value = formData.userComments;
 
 form.addEventListener('input', event => {
   const { name, value } = event.target;
-  formData[name] = value;
+  formData[name] = value.trim();
   setToLocalStorage(formData);
 });
 
