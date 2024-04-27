@@ -1,3 +1,126 @@
-.faq {
-  background-color: salmon;
+.title-faq {
+  margin-bottom: 32px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--Opacity_40);
+}
+.faq-item:first-child {
+  border-top: 1px solid var(--Opacity_20);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--Opacity_20);
+  background-color: var(--Background);
+  padding: 20px 0;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-header {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  width: 265px;
+  color: var(--Main_text);
+  font-weight: 600;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.text-item-list {
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--Opacity_60);
+  padding-top: 16px;
+}
+.answer {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =============TABLET====================== */
+@media screen and (min-width: 768px) {
+  .question-header {
+    width: 485px;
+  }
+
+  .text-item-list {
+    width: 656px;
+    padding-top: 26px;
+  }
+
+  .faq-item {
+    padding: 32px 0 24px 0;
+  }
+}
+/* ===================DESKTOP 1440===================== */
+@media screen and (min-width: 1440px) {
+  .faq-item {
+    padding: 32px 0 26px 0;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .faq-list li:nth-child(1) {
+    order: 1;
+    border-bottom: none;
+    border-right: 1px solid var(--Opacity_20);
+    padding-right: 31.5px;
+  }
+
+  .faq-list li:nth-child(2) {
+    order: 3;
+    border-bottom: none;
+    border-right: 1px solid var(--Opacity_20);
+    padding-right: 31.5px;
+  }
+
+  .faq-list li:nth-child(3) {
+    order: 5;
+    border-right: 1px solid var(--Opacity_20);
+    padding-right: 31.5px;
+  }
+
+  .faq-list li:nth-child(4) {
+    order: 2;
+    border-bottom: none;
+    padding-left: 31.5px;
+  }
+
+  .faq-list li:nth-child(5) {
+    order: 4;
+    border-right: none;
+    border-bottom: none;
+    padding-left: 31.5px;
+  }
+
+  .faq-list li:nth-child(6) {
+    order: 6;
+    padding-left: 31.5px;
+  }
+
+  .faq-list li {
+    flex-basis: calc((100% - 68px) / 2);
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--Opacity_20);
+    border-top: 1px solid var(--Opacity_20);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--Opacity_20);
+  }
 }
