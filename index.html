@@ -31,8 +31,9 @@
     />
     <title>Portfolio</title>
     <script type="module" crossorigin src="/project-syntax-samurais-02/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-syntax-samurais-02/assets/vendor-Vp-DDFKs.js">
-    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/index-DuivZQZ1.css">
+    <link rel="modulepreload" crossorigin href="/project-syntax-samurais-02/assets/vendor-15bv3iGx.js">
+    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/vendor-Be9b3THL.css">
+    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/index-oaTff3s5.css">
   </head>
   <body>
     <header>
@@ -204,7 +205,7 @@
           </button>
         </div>
         <div class="about-me-text ac-panel">
-          <p>
+          <p class="about-me-paragraph">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
             in software development. I have an understanding of different
             programming languages and technologies, always ready to improve my
@@ -213,7 +214,7 @@
             of analytical skills and am able to effectively solve even the most
             difficult tasks encountered on the way.
           </p>
-          <p>
+          <p class="about-me-paragraph">
             Able to work both independently and in a team. I can effectively
             cooperate with colleagues, exchanging ideas and finding optimal
             solutions. Professional maturity allows you to calmly cope with
@@ -281,28 +282,30 @@
         </ul>
       </li>
     </ul>
-    <ul class="about-me-list-skills">
-      <li class="about-me-list-skills-item">HTML/CSS</li>
-      <li class="about-me-list-skills-item">JavaScript</li>
-      <li class="about-me-list-skills-item">React</li>
-      <li class="about-me-list-skills-item">Node.js</li>
-      <li class="about-me-list-skills-item">React Native</li>
-      <li class="about-me-list-skills-item">Typescript</li>
-      <li class="about-me-list-skills-item">Soft skills</li>
-    </ul>
-    <button
-      type="button"
-      class="about-me-btn-swipe"
-      aria-label="Swipe to right button"
-    >
-      <svg class="about-me-btn-icon" width="28" height="28">
-        <title>The Arrow right</title>
-        <desc>Arrow pointing right with a tail</desc>
-        <use
-          href="/project-syntax-samurais-02/assets/icons-BdXK760v.svg#icon-arrow-narrow-right-about-me"
-        ></use>
-      </svg>
-    </button>
+    <div class="about-me-swiper-container swiper" id="swiperAbout">
+      <ul class="about-me-list-skills swiper-wrapper">
+        <li class="about-me-list-skills-item swiper-slide">HTML/CSS</li>
+        <li class="about-me-list-skills-item swiper-slide">JavaScript</li>
+        <li class="about-me-list-skills-item swiper-slide">React</li>
+        <li class="about-me-list-skills-item swiper-slide">Node.js</li>
+        <li class="about-me-list-skills-item swiper-slide">React Native</li>
+        <li class="about-me-list-skills-item swiper-slide">Typescript</li>
+        <li class="about-me-list-skills-item swiper-slide">Soft skills</li>
+      </ul>
+      <button
+        type="button"
+        class="about-me-btn-swipe"
+        aria-label="Swipe to right button"
+      >
+        <svg class="about-me-btn-icon" width="28" height="28">
+          <title>The Arrow right</title>
+          <desc>Arrow pointing right with a tail</desc>
+          <use
+            href="/project-syntax-samurais-02/assets/icons-BdXK760v.svg#icon-arrow-narrow-right-about-me"
+          ></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
 
