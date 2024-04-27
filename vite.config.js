@@ -1,4 +1,5 @@
 import { glob } from 'glob';
+import path from 'path';
 import { defineConfig } from 'vite';
 import FullReload from 'vite-plugin-full-reload';
 import injectHTML from 'vite-plugin-html-inject';
@@ -28,8 +29,8 @@ export default defineConfig(({ command }) => {
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
     resolve: {
       alias: {
-        '@public': new URL('./public', import.meta.url).pathname,
-        '@partials': new URL('./src/partials', import.meta.url).pathname,
+        '@public': path.resolve(__dirname, './public'),
+        '@partials': path.resolve(__dirname, './src/partials'),
         '@assets': new URL('./src/assets', import.meta.url).pathname,
       },
     },
