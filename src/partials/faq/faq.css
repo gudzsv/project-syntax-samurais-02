@@ -20,7 +20,9 @@
 .faq-item:last-child {
   margin-bottom: 0;
 }
-
+.answer {
+  display: none;
+}
 .question {
   display: flex;
   justify-content: space-between;
