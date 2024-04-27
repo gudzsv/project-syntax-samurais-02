@@ -20,6 +20,7 @@
 .faq-item:last-child {
   margin-bottom: 0;
 }
+
 .question {
   display: flex;
   justify-content: space-between;
@@ -36,6 +37,31 @@
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
+.faq-btn {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  color: var(--Main_text);
+  border-radius: 100px;
+  border: 1px solid var(--Opacity_20);
+  transition: all var(--Animation_cubic);
+}
+
+.faq-btn:hover {
+  border-color: var(--Button_background);
+  color: var(--Button_background);
+}
+.faq-btn-icon {
+  stroke: currentColor;
+}
+
 .text-item-list {
   box-sizing: content-box;
   font-weight: 500;
