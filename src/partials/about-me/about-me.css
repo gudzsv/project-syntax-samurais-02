@@ -187,12 +187,14 @@
   .about-me-wrapper-content > div {
     width: calc((100% - 16px) / 2);
   }
-  .about-me-paragraph {
-    max-width: 612px;
-  }
-  .about-me-text {
+  .about-me-text,
+  .about-me-list-item ul {
     align-items: end;
     padding-right: 68px;
+  }
+  .about-me-paragraph,
+  .about-me-list-item ul > li {
+    width: 612px;
   }
 }
 
