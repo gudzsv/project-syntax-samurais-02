@@ -1,11 +1,21 @@
 .reviews{
-margin-left: 32px;
-margin-right: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-top: 82px;
+  padding-bottom: 82px;
 }
 
+.reviews-header{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color:rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
 .swiper{
-  display: flex;
-  flex-direction: column;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after,
@@ -44,13 +54,15 @@ margin-right: 32px;
 }
 
 #reviews-list{
+  margin-bottom: 32px;
 }
 
 #review{
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
 
-  height: 302px;
+  width: auto;
+  min-height: 302px;
   padding: 32px 24px 32px 24px;
 }
 
@@ -58,12 +70,24 @@ margin-right: 32px;
   width: 48px;
   height: 48px;
   border-radius: 10px;
+  margin-bottom: 32px;
 }
 
 .reviewer-name{
+  margin-bottom: 8px;
 
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 1);
 }
 
 .reviewer-text{
 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
 }

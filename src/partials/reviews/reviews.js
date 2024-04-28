@@ -59,12 +59,25 @@ async function loadReviews() {
         fiilList(reviews);
         const swiper = new Swiper('.swiper', {
 
-        navigation: {
-            nextEl: buttonNext,
-            prevEl: buttonPrev,
+            navigation: {
+                nextEl: buttonNext,
+                prevEl: buttonPrev,
             },
+
             slidesPerView: quantitySlides,
-            slidesPerGroup: quantitySlides
+            slidesPerGroup: quantitySlides,
+            spaceBetween: 16,
+
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+                pageUpDown: true
+            },
+
+            mousewheel: {
+                sensitivity: 1,
+            }
+
         });
     }
     catch (error)
