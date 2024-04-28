@@ -1,4 +1,14 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
+import { form, inputEmail, inputComments } from './elements';
 import { sendUserDataApi } from './userDataApi';
+import {
+  resetAllValidation,
+  resetFieldValidation,
+  validateEmail,
+  validateText,
+} from './validationForm';
 
 const STORAGE_KEY = 'formData';
 
@@ -7,12 +17,12 @@ const formData = getFromLocalStorage() || {
   userComments: '',
 };
 
-const form = document.querySelector('.js-submit-form');
-const [inputEmail, inputComments] = form;
 inputEmail.value = formData.userEmail;
 inputComments.value = formData.userComments;
 
 form.addEventListener('input', event => {
+  resetFieldValidation(event.target);
+
   const { name, value } = event.target;
   formData[name] = value.trim();
   setToLocalStorage(formData);
@@ -24,7 +34,10 @@ async function onSubmit(event) {
   event.preventDefault();
   const { userEmail, userComments } = formData;
 
-  if (!userEmail || !userComments) {
+  const isValidEmail = validateEmail(userEmail);
+  const isValidText = validateText(userComments);
+
+  if (!isValidEmail || !isValidText) {
     return;
   }
 
@@ -35,12 +48,18 @@ async function onSubmit(event) {
     });
 
     // const { title, message } = data;
-    // TODO open modal window
+    // TODO open modal window (Kate)
 
     resetData();
   } catch (error) {
-    // izitoast
-    console.error(error);
+    console.log(error.message);
+
+    iziToast.error({
+      title: 'Error',
+      message: error.message,
+      // message: 'Something went wrong',
+      position: 'topRight',
+    });
   }
 }
 
@@ -55,6 +74,7 @@ function getFromLocalStorage(key = STORAGE_KEY) {
 function resetData(key = STORAGE_KEY) {
   localStorage.removeItem(key);
   form.reset();
+  resetAllValidation();
   formData.userEmail = '';
   formData.userComments = '';
 }
