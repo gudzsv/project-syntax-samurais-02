@@ -1,7 +1,27 @@
-import Swiper from 'swiper';
-import 'swiper/css/bundle';
+import Swiper from 'swiper/bundle';
+import "swiper/css/bundle";
 
 const reviewsList = document.querySelector(".swiper-wrapper");
+const buttonNext = document.querySelector(".swiper-button-next"); 
+const buttonPrev = document.querySelector(".swiper-button-prev");
+let quantitySlides;
+
+function setQSlides() {
+    const windowWidth = window.innerWidth;
+    const slide = document.querySelector('.swiper-slide');
+    if (windowWidth < 768)
+    {
+        quantitySlides = 1;
+    }
+    else if (windowWidth < 1440)
+    {
+        quantitySlides = 2
+    }
+    else
+    {
+        quantitySlides = 4;
+    }
+}
 
 async function fetchReviews() {
     try
@@ -22,11 +42,11 @@ function fiilList(reviews) {
     reviewsList.innerHTML = '';
     
     const listHTML = reviews.map(review => `
-    <div class="swiper-slide review">
-                <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image"/>
-                <h3 class="reviewer-name">${review.author}</h3>
-                <p class="reviewer-text">${review.review}</p>
-            </div>
+    <li class="swiper-slide" id="review">
+        <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image" />
+        <h3 class="reviewer-name">${review.author}</h3>
+        <p class="reviewer-text">${review.review}</p>
+    </li>
     `).join('');
 
     reviewsList.insertAdjacentHTML('beforeend', listHTML);
@@ -37,7 +57,15 @@ async function loadReviews() {
     {
         const reviews = await fetchReviews();
         fiilList(reviews);
+        const swiper = new Swiper('.swiper', {
 
+        navigation: {
+            nextEl: buttonNext,
+            prevEl: buttonPrev,
+            },
+            slidesPerView: quantitySlides,
+            slidesPerGroup: quantitySlides
+        });
     }
     catch (error)
     {
@@ -46,12 +74,9 @@ async function loadReviews() {
 }
 
 loadReviews();
+setQSlides();
 
-const swiper = new Swiper('.swiper',{
-    navigation: {
-
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-
-    },
-})
+window.addEventListener('resize', function () {
+    setQSlides();
+    loadReviews();
+});
