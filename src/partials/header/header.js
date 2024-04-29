@@ -73,27 +73,27 @@ const closeBurgerAnimation = new Animation(
 
 function handleMenuClick() {
     
-    if (menuList.classList.contains('hidden')) {
+    if (menuList.classList.contains('visually-hidden')) {
         dropDownAnimation.play();
-        menuList.classList.remove('hidden');
+        menuList.classList.remove('visually-hidden');
         return;
     }
     dropUpAnimation.play();
     setTimeout(() => {
-        menuList.classList.add('hidden');
+        menuList.classList.add('visually-hidden');
     }, 500);
     
 }
 
 function handleBurgerClick() {
-    burgerMenu.classList.remove('hidden');
+    burgerMenu.classList.add('is-open');
     openBurgerAnimation.play();
 }
 
 function handleCloseClick() {
     closeBurgerAnimation.play();
     setTimeout(() => {
-        burgerMenu.classList.add('hidden');
+        burgerMenu.classList.remove('is-open');
     }, 500);
 }
 
