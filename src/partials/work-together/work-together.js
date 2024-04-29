@@ -52,12 +52,9 @@ async function onSubmit(event) {
 
     resetData();
   } catch (error) {
-    console.log(error.message);
-
     iziToast.error({
       title: 'Error',
       message: error.message,
-      // message: 'Something went wrong',
       position: 'topRight',
     });
   }
