@@ -95,6 +95,5 @@ function handleCloseClick() {
     setTimeout(() => {
         burgerMenu.classList.add('hidden');
     }, 500);
-    // 
 }
 

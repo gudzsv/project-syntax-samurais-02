@@ -1,13 +1,17 @@
 /* 320px - 375px Mobile responsive
    768px Tablet Adaptive
    1440px Desktop */
+.header {
+  
+}
 
 .header-container {
-  display: flex;
-  flex-direction: row;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   padding-top: 32px;
 }
 
@@ -27,7 +31,6 @@
   min-width: 172px;
   animation-duration: 1s;
   animation-name: slidein;
-  
 }
 
 .header-image {
@@ -60,8 +63,6 @@
 @media only screen and (min-width: 768px) {
   .menu-box {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     flex-direction: column;
     animation-duration: 1s;
     animation-name: slidein;
@@ -78,6 +79,7 @@
   line-height: 1.19;
   letter-spacing: -0.02em;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .menu-link:hover {
@@ -149,6 +151,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
 }
 
+
+
 @media only screen and (min-width: 768px) {
   .order-btn {
       display: flex;
@@ -168,15 +172,15 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       animation-name: slidein;
     }
   
-    .order-btn:hover {
-      background: rgb(224, 55, 63);
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  
-    .order-btn:focus {
-      background: rgb(224, 55, 63);
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  .order-btn:hover {
+      background-color: rgb(224, 55, 63);
+      transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    
+  .order-btn:focus {
+      background-color: rgb(224, 55, 63);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 
 .burger-btn-box {
