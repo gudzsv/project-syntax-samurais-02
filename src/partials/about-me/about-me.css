@@ -227,7 +227,6 @@
 .about-me-list-skills.swiper-wrapper {
   display: flex;
   width: 260px;
-  /* overflow: hidden; */
 }
 
 .about-me-list-skills-item.swiper-slide {
@@ -277,4 +276,8 @@
 
 .about-me-chapter .section-title.active {
   color: var(--Button_background);
+}
+
+#swiperAbout {
+  overflow: hidden;
 }
