@@ -28,6 +28,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .question-header {
   font-weight: 600;
   font-size: 20px;
@@ -87,7 +88,6 @@
   }
 
   .text-item-list {
-    width: 656px;
     padding-top: 26px;
   }
 
