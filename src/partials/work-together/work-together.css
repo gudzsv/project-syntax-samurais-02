@@ -138,16 +138,12 @@
 }
 .valid-email-text {
   display: none;
-  color: green;
+  color: var(--Success_message);
 }
-.invalid-email-text {
-  display: none;
-  color: red;
-  color: #e74a3b;
-}
+.invalid-email-text,
 .invalid-comments-text {
   display: none;
-  color: #e74a3b;
+  color: var(--Error_message);
 }
 .send-btn {
   width: 100px;
