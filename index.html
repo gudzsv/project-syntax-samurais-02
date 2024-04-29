@@ -31,9 +31,9 @@
     />
     <title>Portfolio</title>
     <script type="module" crossorigin src="/project-syntax-samurais-02/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-syntax-samurais-02/assets/vendor-15bv3iGx.js">
-    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/vendor-Be9b3THL.css">
-    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/index-D0bjWGct.css">
+    <link rel="modulepreload" crossorigin href="/project-syntax-samurais-02/assets/vendor-myCZ30wO.js">
+    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/vendor-B7goKWir.css">
+    <link rel="stylesheet" crossorigin href="/project-syntax-samurais-02/assets/index-DQPltYLe.css">
   </head>
   <body>
     <header>
@@ -2015,23 +2015,27 @@
       Let’s <span class="text-decoration-red"> work</span> together
     </h2>
     <form class="submit-form js-submit-form" autocomplete="off">
-      <input
-        type="email"
-        class="input"
-        name="userEmail"
-        id="user-email"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        required
-      />
-      <input
-        type="text"
-        class="input"
-        name="userComments"
-        id="user-comments"
-        placeholder="comments"
-        required
-      />
+      <div class="input-wrapper">
+        <input
+          type="text"
+          class="input"
+          name="userEmail"
+          id="user-email"
+          placeholder="clients@gmail.com"
+        />
+        <span class="valid-email-text">Success!</span>
+        <span class="invalid-email-text">Invalid email, try again!</span>
+      </div>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          class="input"
+          name="userComments"
+          id="user-comments"
+          placeholder="comments"
+        />
+        <span class="invalid-comments-text">This field is required!</span>
+      </div>
       <button class="send-btn" type="submit">Send</button>
     </form>
     <address class="contacts">
