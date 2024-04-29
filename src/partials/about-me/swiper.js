@@ -18,7 +18,8 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
     onlyInViewport: true,
   },
   mousewheel: true,
-  cssMode: true,
+  touch: true,
+  centeredSlides: false,
   loop: true,
   spaceBetween: 0,
   slideToClickedSlide: true,
@@ -38,10 +39,4 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
   // autoplay: {
   //   delay: 2000,
   // },
-});
-
-window.addEventListener('resize', function () {
-  swiperAboutMe.update();
-  swiperAboutMe.updateSize();
-  swiperAboutMe.updateSlides();
 });
