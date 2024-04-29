@@ -46,8 +46,7 @@ async function onSubmit(event) {
       email: userEmail,
       comment: userComments,
     });
-    openModalWindow();
-    // const { title, message } = data;
+    openModalWithData(data);
 
     resetData();
   } catch (error) {
@@ -73,7 +72,4 @@ function resetData(key = STORAGE_KEY) {
   resetAllValidation();
   formData.userEmail = '';
   formData.userComments = '';
-}
-function openModalWindow() {
-  modalWindow.classList.add('is-open');
 }
