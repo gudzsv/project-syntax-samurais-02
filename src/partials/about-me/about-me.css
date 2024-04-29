@@ -1,10 +1,16 @@
 :root {
-  --Animation_arrow: 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  --Animation_arrow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-me .ac-panel {
   overflow: hidden;
   padding-top: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me .ac-panel {
+    padding-top: 8px;
+  }
 }
 
 .about-me {
@@ -102,13 +108,15 @@
   color: var(--Main_text);
   border-radius: 100px;
   border: 1px solid var(--Opacity_20);
-  transition: all var(--Animation_cubic);
+  transition: transform var(--Animation_arrow),
+    border-color var(--Animation_cubic), color var(--Animation_cubic);
 }
 
 .about-me-btn.btn-active {
   transform: rotate(180deg);
 }
 
+.about-me-btn.btn-active,
 .about-me-btn:hover {
   border-color: var(--Button_background);
   color: var(--Button_background);
@@ -138,6 +146,7 @@
   }
   .about-me-list-skills-item {
     font-size: 20px;
+    cursor: pointer;
   }
 }
 
@@ -201,9 +210,15 @@
 .about-me-swiper-container.swiper {
   display: flex;
   align-items: center;
-  gap: 55px;
+  width: 100%;
   max-width: 1312px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px) {
+  .about-me-swiper-container.swiper {
+    gap: 55px;
+  }
 }
 
 .about-me-list-skills.swiper-wrapper {
@@ -241,10 +256,14 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .about-me-wrapper-slider {
+  .about-me-swiper-container.swiper {
     gap: 72px;
   }
   .about-me-list-skills.swiper-wrapper {
     width: 1200px;
   }
+}
+
+.about-me-chapter.ac-header {
+  cursor: pointer;
 }
