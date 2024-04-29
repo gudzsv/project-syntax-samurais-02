@@ -21,20 +21,44 @@ const dropDownKeyframes = new KeyframeEffect(
     { opacity: "1",
       transform: "translateY(0)"
     }],
-    { duration: 1000 });
+    { duration: 500 });
+
+const dropUpKeyframes = new KeyframeEffect(
+    menuList,
+    [{ opacity: "1",
+      transform: "translateY(0)"
+    },
+    { opacity: "0",
+      transform: "translateY(-100%)"
+    }],
+    { duration: 500 });
 
 const dropDownAnimation = new Animation(
     dropDownKeyframes,
     document.timeline
 )
 
+const dropUpAnimation = new Animation(
+    dropUpKeyframes,
+    document.timeline
+)
+
 const openKeyframes = new KeyframeEffect(
     burgerMenu,
-    [{ transform: "translateX(-100%)"
+    [{ transform: "translateX(100%)"
     },
     { transform: "translateX(0)"
     }],
-    { duration: 1000 }
+    { duration: 500 }
+)
+
+const closeKeyframe = new KeyframeEffect(
+    burgerMenu,
+    [{ transform: "translateX(0)"
+    },
+    { transform: "translateX(100%)"
+    }],
+    { duration: 500 }
 )
 
 const openBurgerAnimation = new Animation(
@@ -42,9 +66,23 @@ const openBurgerAnimation = new Animation(
     document.timeline
 )
 
+const closeBurgerAnimation = new Animation(
+    closeKeyframe,
+    document.timeline
+)
+
 function handleMenuClick() {
-    menuList.classList.toggle('hidden');
-    dropDownAnimation.play();
+    
+    if (menuList.classList.contains('hidden')) {
+        dropDownAnimation.play();
+        menuList.classList.remove('hidden');
+        return;
+    }
+    dropUpAnimation.play();
+    setTimeout(() => {
+        menuList.classList.add('hidden');
+    }, 500);
+    
 }
 
 function handleBurgerClick() {
@@ -53,6 +91,10 @@ function handleBurgerClick() {
 }
 
 function handleCloseClick() {
-    burgerMenu.classList.add('hidden');
+    closeBurgerAnimation.play();
+    setTimeout(() => {
+        burgerMenu.classList.add('hidden');
+    }, 500);
+    // 
 }
 
