@@ -1,6 +1,12 @@
 import Accordion from 'accordion-js';
+
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.faq-item');
+  faqs.forEach(faq =>
+    faq.addEventListener('click', () => {
+      faq.classList.toggle('active');
+    })
+  );
 
   accordionItems.forEach(item => {
     const btn = item.querySelector('.faq-btn');
@@ -15,3 +21,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+const faqs = document.querySelectorAll('.faq-item');

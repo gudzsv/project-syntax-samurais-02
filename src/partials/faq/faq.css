@@ -56,6 +56,9 @@
   transition: all var(--Animation_cubic);
 }
 
+.faq-item.active svg {
+  transform: rotate(180deg);
+}
 .faq-btn:hover {
   border-color: var(--Button_background);
   color: var(--Button_background);
