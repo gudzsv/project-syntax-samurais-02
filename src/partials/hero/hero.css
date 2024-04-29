@@ -3,27 +3,34 @@
   background-size: cover;
   background-blend-mode: overlay;
   background-image: url('@assets/img/hero/hero_red_mobile_1x.webp');
-  @media (min-resolution: 2dppx) {
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
     background-image: url('@assets/img/hero/hero_red_mobile_2x.webp');
-    background-size: cover;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .hero {
     background-image: url('@assets/img/hero/hero_red_tablet_1x.webp');
-    @media (min-resolution: 2dppx) {
-      background-image: url('@assets/img/hero/hero_red_tablet_2x.webp');
-    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('@assets/img/hero/hero_red_tablet_2x.webp');
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero {
     background-image: url('@assets/img/hero/hero_red_desktop_1x.webp');
-    @media (min-resolution: 2dppx) {
-      background-image: url('@assets/img/hero/hero_red_desktop_2x.webp');
-    }
+  }
+}
+@media only screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('@assets/img/hero/hero_red_desktop_2x.webp');
   }
 }
 
