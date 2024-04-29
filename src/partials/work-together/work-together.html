@@ -26,23 +26,27 @@
       Let’s <span class="text-decoration-red"> work</span> together
     </h2>
     <form class="submit-form js-submit-form" autocomplete="off">
-      <input
-        type="email"
-        class="input"
-        name="userEmail"
-        id="user-email"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        required
-      />
-      <input
-        type="text"
-        class="input"
-        name="userComments"
-        id="user-comments"
-        placeholder="comments"
-        required
-      />
+      <div class="input-wrapper">
+        <input
+          type="text"
+          class="input"
+          name="userEmail"
+          id="user-email"
+          placeholder="clients@gmail.com"
+        />
+        <span class="valid-email-text">Success!</span>
+        <span class="invalid-email-text">Invalid email, try again!</span>
+      </div>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          class="input"
+          name="userComments"
+          id="user-comments"
+          placeholder="comments"
+        />
+        <span class="invalid-comments-text">This field is required!</span>
+      </div>
       <button class="send-btn" type="submit">Send</button>
     </form>
     <address class="contacts">
