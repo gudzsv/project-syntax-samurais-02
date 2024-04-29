@@ -1,56 +1,101 @@
 <header>
   <div class="container header-container">
-    <a href="../../index.html" class="header-img-box">
+    <a href="/src/index.html" class="header-img-box">
       <!-- <div class=""> -->
-        <picture>
-          <img
-            class="header-image"
-            srcset="
-              /assets/img/logo/image_1x.webp 1x,
-              /assets/img/logo/image_2x.webp 2x
-            "
-            src="/assets/img/logo/image_1x.webp"
-            alt="logo"
-            width="80"
-            height="80"
-            loading="lazy"
-            title="logo"
-          />
-        </picture>
-        <div>
-            <svg class="name-icon">
-              <use href="/assets/svg/icons.svg#icon-jefferson"></use>
-            </svg>
-        </div>
+      <picture>
+        <img
+          class="header-image"
+          srcset="
+            /assets/img/logo/image_1x.webp 1x,
+            /assets/img/logo/image_2x.webp 2x
+          "
+          src="/assets/img/logo/image_1x.webp"
+          alt="logo"
+          width="80"
+          height="80"
+          loading="lazy"
+          title="logo"
+        />
+      </picture>
+      <div>
+        <svg class="name-icon">
+          <use href="/assets/svg/icons.svg#icon-jefferson"></use>
+        </svg>
+      </div>
       <!-- </div> -->
     </a>
 
+    <nav class="menu-box">
+      <a class="menu-link">Menu</a>
+
+      <div class="drop-down">
+        <ul class="menu-list hidden">
+          <li class="menu-list-item">
+            <a href="#about-me" class="list-item-link">About me</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#benefits" class="list-item-link">Benefits</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#projects" class="list-item-link">Projects</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#faq-section" class="list-item-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="order-btn-box">
+      <a class="order-btn" href="#work-together">Order the project</a>
+    </div>
+
     <div class="burger-btn-box">
       <button class="burger-btn" type="button" aria-label="Mobile menu button">
-        <svg class="burger-btn" width="28" height="28">
+        <svg class="burger-icon" width="28" height="28">
           <use href="/assets/svg/icons.svg#icon-menu-burger"></use>
         </svg>
       </button>
     </div>
-    <nav class="menu-box">
-      <a class="menu-link">Menu</a>
-      <ul class="menu-list hidden">
-        <li class="menu-list-item">
-            <a href="" class="list-item-link">About me</a></li>
-        <li class="menu-list-item">
-            <a href="" class="list-item-link">Benefits</a></li>
-        <li class="menu-list-item">
-            <a href="" class="list-item-link">Projects</a></li>
-        <li class="menu-list-item">
-            <a href="" class="list-item-link">FAQ</a></li>
-      </ul>
-    </nav>
-    <div class="order-btn-box">
-      <button class="order-btn" type="button">Order the project</button>
-    </div>
+
   </div>
 
   <!-- Burger  -->
-  <!-- <div class="backdrop"></div> -->
-  
+
+  <div class="burger-backdrop">
+
+      <div class="burger-menu hidden">
+        <button class="close-btn" type="button" aria-label="Close button">
+          <svg class="close-icon" width="28" height="28">
+            <use href="/assets/svg/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+
+
+        <ul class="burger-menu-list">
+          <li class="burger-menu-list-item">
+            <a href="#about-me" class="burger-list-item-link">About me</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#benefits" class="burger-list-item-link">Benefits</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#projects" class="burger-list-item-link">Projects</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#faq-section" class="burger-list-item-link">FAQ</a>
+          </li>
+        </ul>
+
+        <div class="burger-order-btn-box">
+          <a class="burger-order-btn" href="#work-together">Order the project</a>
+        </div>
+      </div>
+
+  </div>
+
 </header>
+  
+  
+  
+    
