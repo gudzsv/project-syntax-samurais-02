@@ -1,14 +1,12 @@
-/* 320px - 375px Mobile responsive
-   768px Tablet Adaptive
-   1440px Desktop */
+
 .header {
-  
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 .header-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   flex-direction: row;
