@@ -21,6 +21,7 @@ function setQSlides() {
     {
         quantitySlides = 4;
     }
+
 }
 
 async function fetchReviews() {
