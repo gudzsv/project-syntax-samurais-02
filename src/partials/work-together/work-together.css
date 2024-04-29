@@ -112,6 +112,8 @@
   color: var(--Main_text);
   text-overflow: ellipsis;
   transition: border-color var(--Animation_cubic);
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 @media only screen and (min-width: 768px) {
   .input {
@@ -220,9 +222,15 @@
   font-size: 14px;
   line-height: 1.29;
 }
-.valid-input {
+.valid-input,
+.valid-input:hover,
+.valid-input:focus,
+.valid-input:active {
   border-color: var(--Success_message);
 }
-.invalid-input {
+.invalid-input,
+.invalid-input:hover,
+.invalid-input:focus,
+.invalid-input:active {
   border-color: var(--Error_message);
 }
