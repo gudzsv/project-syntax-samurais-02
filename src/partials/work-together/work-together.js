@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { form, inputEmail, inputComments, modalWindow } from './elements';
+import { form, inputEmail, inputComments } from './elements';
 import { sendUserDataApi } from './userDataApi';
 import {
   resetAllValidation,
@@ -9,6 +9,7 @@ import {
   validateEmail,
   validateText,
 } from './validationForm';
+import { openModalWithData } from '../modal/modal';
 
 const STORAGE_KEY = 'formData';
 
@@ -46,8 +47,7 @@ async function onSubmit(event) {
       email: userEmail,
       comment: userComments,
     });
-    openModalWindow();
-    // const { title, message } = data;
+    openModalWithData(data);
 
     resetData();
   } catch (error) {
@@ -73,7 +73,4 @@ function resetData(key = STORAGE_KEY) {
   resetAllValidation();
   formData.userEmail = '';
   formData.userComments = '';
-}
-function openModalWindow() {
-  modalWindow.classList.add('is-open');
 }

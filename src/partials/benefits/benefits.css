@@ -1,16 +1,6 @@
-.benefits-wrapper {
-  padding-top: 31.5px;
-  padding-bottom: 20.5px;
-}
-
 .benefits-section-title {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 1440px) {

@@ -6,4 +6,3 @@ export const invalidEmailSpan = document.querySelector('.invalid-email-text');
 export const invalidCommentSpan = document.querySelector(
   '.invalid-comments-text'
 );
-export const modalWindow = document.querySelector('.backdrop');
