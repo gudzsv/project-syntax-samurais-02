@@ -1,12 +1,25 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
+import { Navigation, Autoplay, Keyboard, Mousewheel } from 'swiper/modules';
+
 const swiperAboutMe = new Swiper('#swiperAbout', {
+  modules: [Navigation, Autoplay, Keyboard, Mousewheel],
+  navigation: {
+    nextEl: '.about-me-btn-swipe',
+  },
+  mousewheel: {
+    invert: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  cssMode: true,
   loop: true,
   speed: 500,
-  cssMode: true,
+  spaceBetween: 0,
   slideToClickedSlide: true,
-  allowTouchMove: true,
   slidesPerView: 2,
   width: 260,
   breakpoints: {
@@ -19,12 +32,7 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
       width: 1200,
     },
   },
-});
-
-const swipeBtn = document.querySelector('.about-me-btn-swipe');
-
-swipeBtn.addEventListener('click', function () {
-  swiperAboutMe.slideNext();
-  swiperAboutMe.updateSize();
-  swiperAboutMe.updateSlides();
+  // autoplay: {
+  //   delay: 2000,
+  // },
 });

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const accAboutMe = new Accordion('#accordionAbout', {
     openOnInit: [0],
+    showMultiple: true,
     beforeOpen: function (accAboutMe) {
       const btn = accAboutMe.querySelector('.about-me-btn.ac-trigger');
       btn.classList.add('btn-active');
