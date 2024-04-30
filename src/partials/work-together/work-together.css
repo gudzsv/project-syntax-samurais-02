@@ -112,8 +112,6 @@
   }
 }
 .input {
-  padding-block-start: 0;
-  padding-block-end: 20px;
   outline: none;
   width: 100%;
   height: 44px;
@@ -149,12 +147,14 @@
   border-radius: 100%;
   background-color: var(--Button_text);
   color: var(--Main_text);
-  transition: background-color var(--Animation_cubic);
+  transition: transform var(--Animation_cubic),
+    background-color var(--Animation_cubic);
 }
 .send-btn:hover,
 .send-btn:focus,
 .send-btn:active {
   background-color: var(--Button_background);
+  transform: scale(1.03);
 }
 @media only screen and (min-width: 768px) {
   .send-btn {
