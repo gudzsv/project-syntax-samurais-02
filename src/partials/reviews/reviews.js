@@ -1,7 +1,9 @@
 import Swiper from 'swiper/bundle';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css'
 import "swiper/css/bundle";
 
+const container = document.querySelector(".container-reviews");
 const reviewsList = document.querySelector("#reviews-list");
 const buttonNext = document.querySelector(".swiper-button-next"); 
 const buttonPrev = document.querySelector(".swiper-button-prev");
@@ -9,7 +11,6 @@ let quantitySlides;
 
 function setQSlides() {
     const windowWidth = window.innerWidth;
-    const slide = document.querySelector('.swiper-slide');
     if (windowWidth < 768)
     {
         quantitySlides = 1;
@@ -36,12 +37,7 @@ async function fetchReviews() {
     }
     catch (error)
     {
-        iziToast.error({
-        title: 'Error',
-        message: `${error.message}`,
-        });
-      
-        errorList();
+      return error;
     }
 }
 
@@ -50,7 +46,8 @@ function fiilList(reviews) {
     
     const listHTML = reviews.map(review => `
     <li class="swiper-slide" id="review">
-        <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image" />
+        <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image width = "48"
+  height = "48" loading="lazy" />
         <h5 class="reviewer-name header-5">${review.author}</h5>
         <p class="main-text-with-opacity">${review.review}</p>
     </li>
@@ -62,9 +59,9 @@ function fiilList(reviews) {
 function errorList() {
   reviewsList.innerHTML = '';
     
-  const listHTML = `<p class="reviewer-text">Not Found</p>`;
+  const listHTML = `<p class="main-text-with-opacity">Not Found</p>`;
 
-  reviewsList.insertAdjacentHTML('beforeend', listHTML);
+  container.insertAdjacentHTML('afterbegin', listHTML);
 }
 
 async function loadReviews() {
@@ -98,9 +95,10 @@ async function loadReviews() {
     catch (error)
     {
         iziToast.error({
-        title: 'Error',
-        message: `${error.message}`,
+          title: 'Error',
+          message: 'Sorry, something went wrong with reviews.'
         });
+      errorList();
     }
 }
 
