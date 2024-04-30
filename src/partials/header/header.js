@@ -88,6 +88,7 @@ function handleMenuClick() {
 function handleBurgerClick() {
     burgerMenu.classList.add('is-open');
     openBurgerAnimation.play();
+    document.body.style.overflow = 'hidden';
 }
 
 function handleCloseClick() {
@@ -95,5 +96,6 @@ function handleCloseClick() {
     setTimeout(() => {
         burgerMenu.classList.remove('is-open');
     }, 500);
+    document.body.style.overflow = '';
 }
 
