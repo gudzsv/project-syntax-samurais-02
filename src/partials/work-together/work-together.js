@@ -9,7 +9,7 @@ import {
   validateEmail,
   validateText,
 } from './validationForm';
-import { openModalWithData } from '../modal/modal';
+import { openModalWithData } from '../modal/modal.js';
 
 const STORAGE_KEY = 'formData';
 
