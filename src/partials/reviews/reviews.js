@@ -1,14 +1,16 @@
 import Swiper from 'swiper/bundle';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import 'swiper/css/bundle';
 
 const reviewsList = document.querySelector('#reviews-list');
 const buttonNext = document.querySelector('.swiper-button-next');
 const buttonPrev = document.querySelector('.swiper-button-prev');
 let quantitySlides;
+let flag = true;
 
 function setQSlides() {
   const windowWidth = window.innerWidth;
-  const slide = document.querySelector('.swiper-slide');
   if (windowWidth < 768) {
     quantitySlides = 1;
   } else if (windowWidth < 1440) {
@@ -28,22 +30,28 @@ async function fetchReviews() {
     }
 
     const reviews = await response.json();
+    flag = true;
     return reviews;
   } catch (error) {
-    throw new Error('Failed to fetch reviews: ' + error.message);
+    return error;
   }
 }
 
-function fiilList(reviews) {
+function fillList(reviews) {
   reviewsList.innerHTML = '';
 
   const listHTML = reviews
     .map(
       review => `
     <li class="swiper-slide" id="review">
-        <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image" />
-        <h3 class="reviewer-name">${review.author}</h3>
-        <p class="reviewer-text">${review.review}</p>
+        <img src="${review.avatar_url}"
+             alt="Reviewer"
+             class="reviewer-image"
+             width = "48"
+             height = "48"
+             loading="lazy" />
+        <h5 class="reviewer-name header-5">${review.author}</h5>
+        <p class="main-text-with-opacity">${review.review}</p>
     </li>
     `
     )
@@ -52,10 +60,21 @@ function fiilList(reviews) {
   reviewsList.insertAdjacentHTML('beforeend', listHTML);
 }
 
+function errorList() {
+  const element = document.querySelector('.error');
+  if (element) {
+    element.remove();
+  }
+
+  const listHTML = `<p class="main-text-with-opacity error">Not Found</p>`;
+
+  reviewsList.insertAdjacentHTML('beforebegin', listHTML);
+}
+
 async function loadReviews() {
   try {
     const reviews = await fetchReviews();
-    fiilList(reviews);
+    fillList(reviews);
     const swiper = new Swiper('.swiper', {
       navigation: {
         nextEl: buttonNext,
@@ -75,14 +94,26 @@ async function loadReviews() {
       mousewheel: {
         sensitivity: 1,
       },
+
+      autoHeight: false,
     });
-  } catch (error) {}
+    flag = true;
+  } catch (error) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Sorry, something went wrong with reviews.',
+    });
+    errorList();
+    flag = false;
+  }
 }
 
-loadReviews();
 setQSlides();
+loadReviews();
 
 window.addEventListener('resize', function () {
-  setQSlides();
-  loadReviews();
+  if (flag) {
+    setQSlides();
+    loadReviews();
+  }
 });
