@@ -4,7 +4,7 @@ import {
   invalidCommentSpan,
   inputEmail,
   inputComments,
-} from './elements';
+} from './elements.js';
 
 const VALIDATION_CLASS = {
   valid: 'valid-input',

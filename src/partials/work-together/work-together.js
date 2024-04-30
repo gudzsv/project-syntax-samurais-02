@@ -1,14 +1,14 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { form, inputEmail, inputComments } from './elements';
-import { sendUserDataApi } from './userDataApi';
+import { form, inputEmail, inputComments } from './elements.js';
+import { sendUserDataApi } from './userDataApi.js';
 import {
   resetAllValidation,
   resetFieldValidation,
   validateEmail,
   validateText,
-} from './validationForm';
+} from './validationForm.js';
 import { openModalWithData } from '../modal/modal.js';
 
 const STORAGE_KEY = 'formData';
