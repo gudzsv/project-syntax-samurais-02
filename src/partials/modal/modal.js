@@ -1,12 +1,11 @@
 const btnClose = document.querySelector('.window-btn');
 const windowBackdrop = document.querySelector('.backdrop');
-const modalTitle = document.querySelector('.window-title');
-const modalText = document.querySelector('.window-text');
-
 const OPEN_CLASS = 'is-open';
+const body = document.querySelector('body');
 
 export const openModalWithData = data => {
   windowBackdrop.classList.add(OPEN_CLASS);
+  body.style.overflow = 'hidden';
   renderModalData(data);
 };
 
@@ -28,15 +27,32 @@ document.addEventListener('keydown', event => {
 
 function closeWindow() {
   windowBackdrop.classList.remove(OPEN_CLASS);
+  document.body.style.overflow = 'auto';
   clearModalData();
 }
 
 function renderModalData({ title = '', message = '' }) {
+  const modalTitle = document.createElement('h2');
+  modalTitle.classList.add('window-title');
   modalTitle.textContent = title;
+
+  const modalText = document.createElement('p');
+  modalText.classList.add('window-text');
   modalText.textContent = message;
+  clearModalData();
+
+  const modalWindow = document.querySelector('.modal-window');
+  modalWindow.appendChild(modalTitle);
+  modalWindow.appendChild(modalText);
 }
 
 function clearModalData() {
-  modalTitle.textContent = '';
-  modalText.textContent = '';
+  const modalTitle = document.querySelector('.window-title');
+  const modalText = document.querySelector('.window-text');
+  if (modalTitle) {
+    modalTitle.remove();
+  }
+  if (modalText) {
+    modalText.remove();
+  }
 }
