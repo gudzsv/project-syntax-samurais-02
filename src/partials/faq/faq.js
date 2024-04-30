@@ -1,4 +1,8 @@
 import Accordion from 'accordion-js';
+new Accordion('.accordion-container-faq', {
+  duration: 800,
+  showMultiple: true,
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.faq-item');
@@ -10,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   accordionItems.forEach(item => {
     const btn = item.querySelector('.faq-btn');
-    const content = item.querySelector('.answer');
+    const content = item.querySelector('.ac-panel');
 
     btn.addEventListener('click', function () {
       if (content.style.display === 'flex') {
