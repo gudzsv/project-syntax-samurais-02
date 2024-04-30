@@ -1,26 +1,27 @@
 .covers {
   position: relative;
-  object-fit: cover;
   overflow: hidden;
   height: 508px;
-}
-
-.marquee {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  position: absolute;
-  top: -280px;
-  right: -800px;
-  left: -50px;
+  min-width: 320px;
   background-color: var(--Background);
   background-image: url(/assets/img/covers/elements_vectors_1x.webp);
   background-size: cover;
 }
 
+.marquee {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-resolution: 192dpi) {
-  .marquee {
+  .covers {
     background-image: url(/assets/img/covers/elements_vectors_2x.webp);
   }
 }
@@ -41,22 +42,22 @@
 }
 .animation {
   animation-name: marqueeLine;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 .marquee-foto {
-  display: block;
-  width: 100%;
   height: 100%;
 }
 @keyframes marqueeLine {
-  from {
-    transform: translateX(-20%);
+  0% {
+    transform: translate(10px);
   }
-
-  to {
-    transform: translateX(-190%);
+  50% {
+    transform: translate(-100px);
+  }
+  100% {
+    transform: translate(10px);
   }
 }
 
@@ -66,6 +67,10 @@
     height: 960px;
   }
   .marquee {
+    top: -40px;
+    gap: 44px;
+  }
+  .marquee__inner {
     gap: 44px;
   }
   .marquee__card {
@@ -75,6 +80,11 @@
 }
 
 /* Desktop */
-/* @media only screen and (min-width: 1440px) {
- 
-} */
+@media only screen and (min-width: 1440px) {
+  .marquee {
+    gap: 64px;
+  }
+  .marquee__inner {
+    gap: 64px;
+  }
+}

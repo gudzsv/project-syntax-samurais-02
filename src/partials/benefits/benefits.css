@@ -1,29 +1,43 @@
-.benefits-wrapper {
-  padding-top: 31.5px;
-  padding-bottom: 20.5px;
+@media screen and (min-width: 1440px) {
+  .benefits-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container-list-with-button {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-list-with-button {
+    gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-list-with-button {
+    width: 710px;
+  }
 }
 
 .benefits-section-title {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
+  font-size: 16px;
+  min-width: 284px;
 }
 
 @media screen and (min-width: 1440px) {
   .benefits-section-title {
-    position: absolute;
+    margin-bottom: 0px;
   }
 }
 
-.benefits-items-list{
+.benefits-items-list {
   border-radius: 20px;
   padding: 24px;
   background: #242527;
-  margin-bottom: 16px;
 }
 
 .benefits-items-list:hover {
@@ -41,26 +55,27 @@
   }
 }
 
-.last{
-  margin-bottom: 32px;
-}
-
-@media screen and (min-width: 768px) {
- .benefits-list {
+.benefits-list {
   gap: 16px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
- } 
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 @media screen and (min-width: 1440px) {
   .benefits-list {
     justify-content: right;
-    margin-left: 500px;
-    
- }
-  }  
+  }
+}
 .icon-wrapper {
   padding: 12px;
   width: 48px;
@@ -69,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ED3B44;   
+  background-color: #ed3b44;
   margin-bottom: 64px;
 }
 
@@ -77,7 +92,7 @@
   margin-bottom: 8px;
 }
 
-.button-wrapper {
+.button-order-benefits {
   display: flex;
   align-items: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -88,16 +103,10 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
-  color: #FAFAFA;
+  color: #fafafa;
   transition: border-color var(--Animation_cubic);
 }
 
-.button-wrapper:hover {
+.button-order-benefits:hover {
   border-color: 1.5px solid var(--Main_text);
 }
-
-@media screen and (min-width: 1440px) {
-  .button-wrapper {
-    margin-left: 49%;
-  }
-} 

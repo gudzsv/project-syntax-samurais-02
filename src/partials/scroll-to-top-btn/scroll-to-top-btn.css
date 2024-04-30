@@ -1,0 +1,26 @@
+.btn-scroll-to-top {
+  position: fixed;
+  z-index: 99;
+  right: 16px;
+  bottom: 32px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Arrow);
+  border: none;
+  outline: none;
+  padding: 0;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  width: 36px;
+  height: 36px;
+  color: var(--Button_background);
+  border-radius: 100px;
+  border: 1px solid var(--Button_background);
+  transition: border-color var(--Animation_cubic), color var(--Animation_cubic);
+}
+
+.btn-scroll-to-top:hover {
+  border-color: var(--Main_text);
+  color: var(--Main_text);
+}

@@ -1,1 +1,2 @@
-import './about-me.js';
+import './accordion.js';
+import './swiper.js';
