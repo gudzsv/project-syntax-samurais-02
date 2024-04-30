@@ -1,14 +1,37 @@
 :root {
-  --Animation_arrow: 900ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.about-me {
-  padding: 64px 0px;
+  --Animation_arrow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-me .ac-panel {
   overflow: hidden;
+}
+
+.about-me-list-item.is-active .ac-panel {
   padding-top: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-list-item.is-active .ac-panel {
+    padding-top: 8px;
+  }
+}
+
+.about-me {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me {
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me {
+    padding-top: 96px;
+    padding-bottom: 164px;
+  }
 }
 
 .about-me .container {
@@ -46,6 +69,13 @@
   padding: 32px;
 }
 
+@media only screen and (min-width: 768px) {
+  .about-me-content {
+    height: 700px;
+    padding: 64px;
+  }
+}
+
 .about-me-img-wrapper {
   display: flex;
   align-items: center;
@@ -58,18 +88,6 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 1440px) {
-  .about-me-wrapper-content {
-    flex-direction: row;
-  }
-  .about-me-wrapper-content > div {
-    width: calc((100% - 16px) / 2);
-  }
-  .about-me-content {
-    height: 700px;
-  }
-}
-
 .about-me-chapter {
   display: flex;
 }
@@ -78,6 +96,7 @@
 .about-me-btn-swipe {
   background-color: transparent;
   border: none;
+  outline: none;
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -92,13 +111,15 @@
   color: var(--Main_text);
   border-radius: 100px;
   border: 1px solid var(--Opacity_20);
-  transition: all var(--Animation_cubic);
+  transition: transform var(--Animation_arrow),
+    border-color var(--Animation_cubic), color var(--Animation_cubic);
 }
 
 .about-me-btn.btn-active {
   transform: rotate(180deg);
 }
 
+.about-me-btn.btn-active,
 .about-me-btn:hover {
   border-color: var(--Button_background);
   color: var(--Button_background);
@@ -108,14 +129,33 @@
   color: var(--Arrow);
   width: 28px;
   height: 28px;
-  transition: all var(--Animation_arrow);
+  transition: color var(--Animation_arrow);
 }
 
 .about-me-btn-swipe:hover,
 .about-me-btn-swipe:focus,
 .about-me-btn-swipe:active {
   color: var(--Button_text);
-  transform: translateX(-20%) scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-btn-swipe,
+  .about-me-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .about-me-btn-swipe .about-me-btn-icon {
+    width: 100%;
+    height: 100%;
+  }
+  .about-me-btn .about-me-btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .about-me-list-skills-item {
+    font-size: 20px;
+    cursor: pointer;
+  }
 }
 
 .about-me-btn-icon {
@@ -151,7 +191,50 @@
   gap: 32px;
 }
 
-.about-me-list-skills-item {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .about-me-text {
+    gap: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-wrapper-content {
+    flex-direction: row;
+  }
+  .about-me-wrapper-content > div {
+    width: calc((100% - 16px) / 2);
+  }
+  .about-me-text,
+  .about-me-list-item ul {
+    align-items: end;
+    padding-right: 68px;
+  }
+  .about-me-paragraph,
+  .about-me-list-item ul > li {
+    width: 612px;
+  }
+}
+
+.about-me-wrapper-swiper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px) {
+  .about-me-wrapper-swiper {
+    gap: 55px;
+  }
+}
+
+.about-me-list-skills.swiper-wrapper {
+  display: flex;
+  width: 260px;
+}
+
+.about-me-list-skills-item.swiper-slide {
   width: 130px;
   height: 130px;
   display: flex;
@@ -160,4 +243,46 @@
   border-radius: 100%;
   border: 1px solid var(--Opacity_20);
   flex-shrink: 0;
+}
+
+.about-me-list-skills-item.swiper-slide-active {
+  background-color: var(--Button_text);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-wrapper-swiper {
+    gap: 64px;
+  }
+  .about-me-list-skills.swiper-wrapper {
+    width: 600px;
+  }
+  .about-me-list-skills-item.swiper-slide {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-wrapper-swiper {
+    gap: 72px;
+  }
+  .about-me-list-skills.swiper-wrapper {
+    width: 1200px;
+  }
+}
+
+.about-me-chapter.ac-header {
+  cursor: pointer;
+}
+
+.about-me-chapter .section-title {
+  transition: color var(--Animation_arrow);
+}
+
+.about-me-chapter .section-title.active {
+  color: var(--Button_background);
+}
+
+#swiperAbout {
+  overflow: hidden;
 }
