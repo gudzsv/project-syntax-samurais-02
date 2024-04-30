@@ -95,7 +95,8 @@ async function loadReviews() {
                 sensitivity: 1,
           },
             
-            autoHeight:false,
+          autoHeight: false,
+          observer: true,
 
         });
       flag = true;
