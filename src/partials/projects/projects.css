@@ -5,15 +5,33 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 .project-card {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
-  overflow: hidden;
-  width: 343px;
+  overflow: hidden;  
   height: auto;
 }
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRightToLeft  {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 
 .project-card .left-part {
   flex: 1;
@@ -53,9 +71,9 @@ text-align: left;
   height: auto;
 }
 .project-card h3 {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   color: #1C1D20;
-  padding-top: 96px;
+  margin-top: 96px;
 font-family: Inter Tight;
 font-size: 24px;
 font-weight: 500;
@@ -103,14 +121,14 @@ text-align: left;
   display: flex;
   justify-content: center;
   gap: 12px;
-  padding-top: 32px;
+  margin-top: 32px;
 }
 
 .projects {
   margin-bottom: 64px;
 }
 
-.projects-header h2 {
+.projects-header {
   font-family: Inter Tight;
 font-size: 16px;
 font-weight: 600;
@@ -120,7 +138,7 @@ text-align: left;
 color: #FAFAFA66;
 }
 .projects-header {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 .project-swiper-btn {
   display: flex; 
@@ -152,7 +170,6 @@ color: #FAFAFA66;
 /* =============TABLET====================== */
 @media screen and (min-width: 768px) {
   .project-card {
-    width: 704px;
     height: auto;
   }
 
@@ -167,7 +184,7 @@ color: #FAFAFA66;
   }
 
   .project-card h3 {
-    padding-top: 164px;
+    margin-top: 164px;
   font-size: 44px;
   line-height: 44px;
   width: 494px;
@@ -190,15 +207,26 @@ color: #FAFAFA66;
 @media screen and (min-width: 1440px) {
   .project-card {
     flex-direction: row;
-    width: 1376px;
     height: auto;
   }
   .project-card h3 {
-    padding-top: 223px;
+    margin-top: 223px;
   }
 
   .project-card .right-part {
     height: auto;
     padding: 120px 37px;
    }
+}
+
+.swiper-slide:not(:first-child) {
+  display: none;
+}
+
+@media screen and (max-width: 374px) {
+  .swiper-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
 }
