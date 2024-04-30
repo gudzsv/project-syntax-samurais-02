@@ -88,8 +88,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 37px;
-  min-height: 37px;
+  min-width: 34px;
+  min-height: 34px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -114,7 +114,7 @@
 .heder-contact-info-link {
   display: flex;
   min-width: 178px;
-  min-height: 37px;
+  min-height: 34px;
   justify-content: center;
   align-items: center;
 }
