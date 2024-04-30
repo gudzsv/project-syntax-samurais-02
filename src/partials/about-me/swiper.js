@@ -21,6 +21,7 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
   touch: true,
   centeredSlides: false,
   loop: true,
+  speed: 500,
   spaceBetween: 0,
   slideToClickedSlide: true,
   allowTouchMove: true,
