@@ -1,12 +1,12 @@
 .btn-scroll-to-top {
   position: fixed;
   z-index: 99;
-  right: 40px;
-  bottom: 40px;
+  right: 16px;
+  bottom: 32px;
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: var(--Opacity_10);
+  background-color: var(--Arrow);
   border: none;
   outline: none;
   padding: 0;
