@@ -1,7 +1,8 @@
 import Swiper from 'swiper/bundle';
+import iziToast from 'izitoast';
 import "swiper/css/bundle";
 
-const reviewsList = document.querySelector(".swiper-wrapper");
+const reviewsList = document.querySelector("#reviews-list");
 const buttonNext = document.querySelector(".swiper-button-next"); 
 const buttonPrev = document.querySelector(".swiper-button-prev");
 let quantitySlides;
@@ -35,7 +36,12 @@ async function fetchReviews() {
     }
     catch (error)
     {
-        throw new Error('Failed to fetch reviews: ' + error.message);
+        iziToast.error({
+        title: 'Error',
+        message: `${error.message}`,
+        });
+      
+        errorList();
     }
 }
 
@@ -45,12 +51,20 @@ function fiilList(reviews) {
     const listHTML = reviews.map(review => `
     <li class="swiper-slide" id="review">
         <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image" />
-        <h3 class="reviewer-name">${review.author}</h3>
-        <p class="reviewer-text">${review.review}</p>
+        <h5 class="reviewer-name header-5">${review.author}</h5>
+        <p class="main-text-with-opacity">${review.review}</p>
     </li>
     `).join('');
 
     reviewsList.insertAdjacentHTML('beforeend', listHTML);
+}
+
+function errorList() {
+  reviewsList.innerHTML = '';
+    
+  const listHTML = `<p class="reviewer-text">Not Found</p>`;
+
+  reviewsList.insertAdjacentHTML('beforeend', listHTML);
 }
 
 async function loadReviews() {
@@ -83,7 +97,10 @@ async function loadReviews() {
     }
     catch (error)
     {
-
+        iziToast.error({
+        title: 'Error',
+        message: `${error.message}`,
+        });
     }
 }
 

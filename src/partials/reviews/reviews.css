@@ -18,10 +18,10 @@
   margin-bottom: 32px;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after,
-.swiper-button-next::before,
-.swiper-button-prev::before {
+.reviews .swiper-button-next::after,
+.reviews .swiper-button-prev::after,
+.reviews .swiper-button-next::before,
+.reviews .swiper-button-prev::before {
   display: none;
 }
 
@@ -81,21 +81,6 @@
 
 .reviewer-name{
   margin-bottom: 8px;
-
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 1);
-}
-
-.reviewer-text{
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
 }
 
 @media only screen and (min-width: 768px){
