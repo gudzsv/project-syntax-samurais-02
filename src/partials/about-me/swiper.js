@@ -3,10 +3,10 @@ import 'swiper/css';
 
 import 'swiper/css/mousewheel';
 
-import { Navigation, Autoplay, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const swiperAboutMe = new Swiper('#swiperAbout', {
-  modules: [Navigation, Autoplay, Keyboard, Mousewheel],
+  modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.about-me-btn-swipe',
   },
@@ -18,8 +18,10 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
     onlyInViewport: true,
   },
   mousewheel: true,
-  cssMode: true,
+  touch: true,
+  centeredSlides: false,
   loop: true,
+  speed: 500,
   spaceBetween: 0,
   slideToClickedSlide: true,
   allowTouchMove: true,
@@ -35,13 +37,4 @@ const swiperAboutMe = new Swiper('#swiperAbout', {
       width: 1200,
     },
   },
-  // autoplay: {
-  //   delay: 2000,
-  // },
-});
-
-window.addEventListener('resize', function () {
-  swiperAboutMe.update();
-  swiperAboutMe.updateSize();
-  swiperAboutMe.updateSlides();
 });

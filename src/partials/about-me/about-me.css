@@ -4,11 +4,14 @@
 
 .about-me .ac-panel {
   overflow: hidden;
+}
+
+.about-me-list-item.is-active .ac-panel {
   padding-top: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-  .about-me .ac-panel {
+  .about-me-list-item.is-active .ac-panel {
     padding-top: 8px;
   }
 }
@@ -207,7 +210,7 @@
   }
 }
 
-.about-me-swiper-container.swiper {
+.about-me-wrapper-swiper {
   display: flex;
   align-items: center;
   width: 100%;
@@ -216,7 +219,7 @@
 }
 
 @media only screen and (min-width: 375px) {
-  .about-me-swiper-container.swiper {
+  .about-me-wrapper-swiper {
     gap: 55px;
   }
 }
@@ -224,7 +227,6 @@
 .about-me-list-skills.swiper-wrapper {
   display: flex;
   width: 260px;
-  overflow: hidden;
 }
 
 .about-me-list-skills-item.swiper-slide {
@@ -243,7 +245,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .about-me-swiper-container.swiper {
+  .about-me-wrapper-swiper {
     gap: 64px;
   }
   .about-me-list-skills.swiper-wrapper {
@@ -256,7 +258,7 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .about-me-swiper-container.swiper {
+  .about-me-wrapper-swiper {
     gap: 72px;
   }
   .about-me-list-skills.swiper-wrapper {
@@ -266,4 +268,16 @@
 
 .about-me-chapter.ac-header {
   cursor: pointer;
+}
+
+.about-me-chapter .section-title {
+  transition: color var(--Animation_arrow);
+}
+
+.about-me-chapter .section-title.active {
+  color: var(--Button_background);
+}
+
+#swiperAbout {
+  overflow: hidden;
 }
