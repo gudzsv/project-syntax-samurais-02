@@ -218,15 +218,3 @@ color: #FAFAFA66;
     padding: 120px 37px;
    }
 }
-
-.swiper-slide:not(:first-child) {
-  display: none;
-}
-
-@media screen and (max-width: 374px) {
-  .swiper-container {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-}
