@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
       prevIndex = currentIndex; 
       currentIndex--;
       showCurrentCard();
-      projectItems[prevIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
-      projectItems[currentIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
+      projectItems[prevIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
+      projectItems[currentIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
     }
   });
 
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
       prevIndex = currentIndex; 
       currentIndex++;
       showCurrentCard();
-      projectItems[prevIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
-      projectItems[currentIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
+      projectItems[prevIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
+      projectItems[currentIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
     }
   });
 
@@ -52,14 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
       prevIndex = currentIndex; 
       currentIndex--;
       showCurrentCard();
-      projectItems[prevIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
-      projectItems[currentIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
+      projectItems[prevIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
+      projectItems[currentIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
     } else if (event.code === 'ArrowRight' && currentIndex < projectItems.length - 1) {
       prevIndex = currentIndex;
       currentIndex++;
       showCurrentCard();
-      projectItems[prevIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
-      projectItems[currentIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
+      projectItems[prevIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
+      projectItems[currentIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
     }
   });
 
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
         prevIndex = currentIndex; 
         currentIndex--;
         showCurrentCard();
-        projectItems[prevIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
-        projectItems[currentIndex].style.animation = 'slideRightToLeft 0.2s ease-in-out';
+        projectItems[prevIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
+        projectItems[currentIndex].style.animation = 'slideRightToLeft 0.7s ease-in-out';
       }
     } else if (touchStartX - touchEndX > swipeThreshold) {
       // Свайп влево
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
         prevIndex = currentIndex; 
         currentIndex++;
         showCurrentCard();
-        projectItems[prevIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
-        projectItems[currentIndex].style.animation = 'slideLeftToRight 0.2s ease-in-out';
+        projectItems[prevIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
+        projectItems[currentIndex].style.animation = 'slideLeftToRight 0.7s ease-in-out';
       }
     }
   }

@@ -126,6 +126,7 @@ text-align: left;
 
 .projects {
   margin-bottom: 64px;
+  overflow-x: hidden;
 }
 
 .projects-header {
