@@ -1,6 +1,6 @@
 import Accordion from 'accordion-js';
 new Accordion('.accordion-container-faq', {
-  duration: 800,
+  duration: 900,
   showMultiple: true,
 });
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btn.addEventListener('click', function () {
       if (content.style.display === 'flex') {
-        content.style.display = 'none';
+        content.style.overflow = 'hidden';
       } else {
         content.style.display = 'flex';
       }
