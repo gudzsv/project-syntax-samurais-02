@@ -21,15 +21,15 @@
 .faq-item:last-child {
   margin-bottom: 0;
 }
-.question .ac-panel {
-  display: none;
-}
+
 .question {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.question .ac-panel {
+  overflow: hidden;
+}
 .question-header {
   font-weight: 600;
   font-size: 20px;
@@ -81,18 +81,18 @@
 .faq-item .ac-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1.4s ease;
 }
 .faq-item.active .ac-panel {
   max-height: 300px;
-  animation: fade 1s ease-in-out;
 }
 
 .faq-item.active svg {
   transform: rotate(180deg);
 }
+
 .faq-btn-icon {
-  transition: transform 0.5s ease-in;
+  transition: transform var(--Animation_arrow),
+    border-color var(--Animation_cubic), color var(--Animation_cubic);
 }
 
 /* =============TABLET====================== */
