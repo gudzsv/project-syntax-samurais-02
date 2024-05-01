@@ -24,3 +24,17 @@
   border-color: var(--Main_text);
   color: var(--Main_text);
 }
+
+@media only screen and (min-width: 1440px) {
+  .btn-scroll-to-top {
+    right: 80px;
+    bottom: 60px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-scroll-to-top > svg {
+    width: 23px;
+    height: 23px;
+  }
+}
