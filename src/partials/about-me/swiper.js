@@ -1,8 +1,7 @@
-import Swiper from 'swiper'
-import 'swiper/css/bundle'
+import Swiper from 'swiper';
+import 'swiper/css/bundle';
 
-
-import { Keyboard, Mousewheel, Navigation } from 'swiper/modules'
+import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 
 const swiperAboutMe = new Swiper('#swiperAbout', {
   modules: [Navigation, Keyboard, Mousewheel],
