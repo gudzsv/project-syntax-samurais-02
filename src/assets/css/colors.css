@@ -8,7 +8,8 @@
   --Main_text: #fafafa;
   --Opacity_10: rgba(250, 250, 250, 0.1);
   --Opacity_20: rgba(250, 250, 250, 0.2);
-  --Opacity_40: rgba(250, 250, 250, 0.4);
+  --Opacity_40: #FAFAFAA6;
+  /* --Opacity_40: rgba(250, 250, 250, 0.4); */
   --Opacity_60: rgba(250, 250, 250, 0.6);
   --Success_message: #3cbc81;
   --Error_message: #e74a3b;
