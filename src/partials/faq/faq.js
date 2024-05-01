@@ -2,7 +2,6 @@ import Accordion from 'accordion-js';
 new Accordion('.accordion-container-faq', {
   duration: 900,
   showMultiple: true,
-  openOnInit: [0],
 });
 
 document.addEventListener('DOMContentLoaded', function () {
