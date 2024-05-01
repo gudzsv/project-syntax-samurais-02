@@ -6,12 +6,14 @@
   overflow: hidden;
 }
 
-.about-me-list-item.is-active .ac-panel {
+.about-me-paragraph:first-child,
+.about-me .ac-panel > li:first-child {
   padding-top: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-  .about-me-list-item.is-active .ac-panel {
+  .about-me-paragraph:first-child,
+  .about-me .ac-panel > li:first-child {
     padding-top: 8px;
   }
 }
