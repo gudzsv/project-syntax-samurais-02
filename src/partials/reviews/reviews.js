@@ -1,10 +1,10 @@
-import Swiper from 'swiper/bundle';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-import "swiper/css/bundle";
+import iziToast from 'izitoast'
+import 'izitoast/dist/css/iziToast.min.css'
+import Swiper from 'swiper/bundle'
+import "swiper/css/bundle"
 
 const reviewsList = document.querySelector("#reviews-list");
-const buttonNext = document.querySelector(".swiper-button-next"); 
+const buttonNext = document.querySelector(".swiper-button-next");
 const buttonPrev = document.querySelector(".swiper-button-prev");
 let quantitySlides;
 let flag = true;
@@ -31,7 +31,7 @@ async function fetchReviews() {
     {
         const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
         if (response.status != 200) { throw new Error('Failed to fetch reviews'); }
-        
+
       const reviews = await response.json();
       flag = true;
       return reviews;
@@ -44,12 +44,12 @@ async function fetchReviews() {
 
 function fillList(reviews) {
     reviewsList.innerHTML = '';
-    
+
     const listHTML = reviews.map(review => `
     <li class="swiper-slide" id="review">
         <img src="${review.avatar_url}" alt="Reviewer" class="reviewer-image" width = "48"
   height = "48" loading="lazy" />
-        <h5 class="reviewer-name header-5">${review.author}</h5>
+        <h3 class="reviewer-name header-5">${review.author}</h3>
         <p class="main-text-with-opacity">${review.review}</p>
     </li>
     `).join('');
@@ -62,8 +62,8 @@ function errorList() {
   const element = document.querySelector('.error');
   if (element) {
     element.remove();
-  } 
-  
+  }
+
   const listHTML = `<p class="main-text-with-opacity error">Not Found</p>`;
 
   reviewsList.insertAdjacentHTML('beforebegin', listHTML);
@@ -94,7 +94,7 @@ async function loadReviews() {
             mousewheel: {
                 sensitivity: 1,
           },
-            
+
           autoHeight: false,
           observer: true,
 
