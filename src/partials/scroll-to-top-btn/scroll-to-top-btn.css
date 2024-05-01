@@ -1,6 +1,6 @@
 .btn-scroll-to-top {
   position: fixed;
-  z-index: 99;
+  z-index: 55;
   right: 16px;
   bottom: 32px;
   display: none;
