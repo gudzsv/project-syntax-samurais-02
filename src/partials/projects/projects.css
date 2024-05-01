@@ -33,15 +33,16 @@
 }
 
 
-.project-card .left-part {
+.left-part {
   flex: 1;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 32px;
 }
-.project-card .left-part .technologies {
+.technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: 96px;
 }
 .project-card .left-part .technology {
   background-color: transparent;
@@ -58,10 +59,10 @@ text-align: left;
 
   
 }
-.project-card .right-part {
+.right-part {
   flex: 1;
   background-color: #242527;
-  padding: 100px 20px;
+  padding: 100px 16px;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -73,7 +74,6 @@ text-align: left;
 .project-card h3 {
   margin-bottom: 32px;
   color: #1C1D20;
-  margin-top: 96px;
 font-family: Inter Tight;
 font-size: 24px;
 font-weight: 500;
@@ -117,15 +117,18 @@ line-height: 19.36px;
 letter-spacing: -0.02em;
 text-align: left;
 }
+
 .projects-swiper-btns {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 .projects {
-  margin-bottom: 64px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .projects-header {
@@ -138,7 +141,7 @@ text-align: left;
 color: #FAFAFA66;
 }
 .projects-header {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 .project-swiper-btn {
   display: flex; 
@@ -158,13 +161,15 @@ color: #FAFAFA66;
   cursor: not-allowed;
   opacity: 0.2;
 }
-.project-swiper-btn:hover,
-.project-swiper-btn:focus {
+.project-swiper-btn:not([disabled]):hover,
+.project-swiper-btn:not([disabled]):focus {
   border: 1px solid #E0373F;
+  transform: scale(1.03);
 }
-.project-swiper-btn:hover .project-btn-icon,
-.project-swiper-btn:focus .project-btn-icon {
+.project-swiper-btn:not([disabled]):hover .project-btn-icon,
+.project-swiper-btn:not([disabled]):focus .project-btn-icon {
   stroke: #E0373F;
+  transform: scale(1.03);
 }
 
 /* =============TABLET====================== */
@@ -178,13 +183,14 @@ color: #FAFAFA66;
     height: auto;
   }
 
-  .project-card .right-part {
+  .right-part {
    height: auto;
-   padding: 120px 0;
+   padding: 120px 45px;
   }
-
+  .technologies {
+    margin-bottom: 164px;
+  }
   .project-card h3 {
-    margin-top: 164px;
   font-size: 44px;
   line-height: 44px;
   width: 494px;
@@ -201,6 +207,9 @@ color: #FAFAFA66;
   .project-swiper-btns {
     gap: 20px;
   }
+  .projects-swiper-btns {
+    margin-bottom: 96px;
+  }
 }
 
 /* ===================DESKTOP 1440===================== */
@@ -209,12 +218,15 @@ color: #FAFAFA66;
     flex-direction: row;
     height: auto;
   }
-  .project-card h3 {
-    margin-top: 223px;
+  .technologies {
+    margin-bottom: 223px;
   }
 
   .project-card .right-part {
     height: auto;
     padding: 120px 37px;
    }
+   .projects-swiper-btns {
+    margin-bottom: 164x;
+  }
 }

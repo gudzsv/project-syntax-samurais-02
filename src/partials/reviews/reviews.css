@@ -1,10 +1,10 @@
 .reviews{
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 82px;
   padding-bottom: 82px;
+}
 
-  width: 344px;
+.reviews .swiper-slide{
+  height: auto;
 }
 
 .reviews-header{
@@ -23,6 +23,16 @@
 .swiper-button-next::before,
 .swiper-button-prev::before {
   display: none;
+}
+
+#prev:hover,
+#next:hover {
+  border-color: #E0373F;
+}
+
+#prev:hover .icon,
+#next:hover .icon{
+  stroke: #E0373F;
 }
 
 .icon{
@@ -81,31 +91,16 @@
 
 .reviewer-name{
   margin-bottom: 8px;
-
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 1);
 }
 
-.reviewer-text{
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+.error{
+  text-align: center;
 }
 
-@media only screen and (min-width: 768px){
-  .reviews{
-    width: 704px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .reviews{
-    width: 1376px;
-  }
+@media screen and (min-width: 768px) {
+  #prev,
+    #next{
+      width: 68px;
+      height: 68px;
+    }
 }
