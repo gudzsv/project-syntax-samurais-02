@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import 'swiper/css';
+import 'swiper/css/bundle';
 
 import 'swiper/css/mousewheel';
 
