@@ -1,7 +1,4 @@
 .project-list {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -123,7 +120,7 @@ text-align: left;
   justify-content: center;
   gap: 12px;
   margin-top: 32px;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 .projects {
@@ -164,12 +161,12 @@ color: #FAFAFA66;
 .project-swiper-btn:not([disabled]):hover,
 .project-swiper-btn:not([disabled]):focus {
   border: 1px solid #E0373F;
-  transform: scale(1.03);
+
 }
 .project-swiper-btn:not([disabled]):hover .project-btn-icon,
 .project-swiper-btn:not([disabled]):focus .project-btn-icon {
   stroke: #E0373F;
-  transform: scale(1.03);
+  
 }
 
 /* =============TABLET====================== */
@@ -208,7 +205,7 @@ color: #FAFAFA66;
     gap: 20px;
   }
   .projects-swiper-btns {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 }
 
@@ -227,6 +224,6 @@ color: #FAFAFA66;
     padding: 120px 37px;
    }
    .projects-swiper-btns {
-    margin-bottom: 164x;
+    padding-bottom: 164x;
   }
 }
