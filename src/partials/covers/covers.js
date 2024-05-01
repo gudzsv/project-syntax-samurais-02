@@ -14,13 +14,11 @@ let animationCovers = entries => {
     if (entry.isIntersecting) {
       section.cards.forEach(card => {
         card.classList.add('animation');
-        // console.log('add');
       });
       return;
     }
     section.cards.forEach(card => {
       card.classList.remove('animation');
-      // console.log('remove');
     });
   });
 };
