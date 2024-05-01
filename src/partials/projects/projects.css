@@ -114,6 +114,11 @@ line-height: 19.36px;
 letter-spacing: -0.02em;
 text-align: left;
 }
+.project-btn:hover,
+.project-btn:focus {
+  background-color: #E0373F;
+  transform: scale(1.05);
+}
 
 .projects-swiper-btns {
   display: flex;
