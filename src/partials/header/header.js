@@ -15,7 +15,7 @@ orderBtn.addEventListener('click', handleCloseClick);
 burgerMenuList.addEventListener('click', handleCloseClick);
 
 document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
+    if (event.key ==='Escape' && !menuList.classList.contains('visually-hidden')) {
         handleMenuClick();
     }
 })
@@ -78,9 +78,8 @@ const closeBurgerAnimation = new Animation(
     document.timeline
 )
 
-function handleMenuClick(event) {
-    console.log(event.currentTarget);
-    if (menuList.classList.contains('visually-hidden')) {
+function handleMenuClick() {  
+    if (menuList.classList.contains('visually-hidden')) {   
         dropDownAnimation.play();
         menuList.classList.remove('visually-hidden');
         return;
@@ -89,7 +88,6 @@ function handleMenuClick(event) {
     setTimeout(() => {
         menuList.classList.add('visually-hidden');
     }, 500);
-    
 }
 
 function handleBurgerClick() {
