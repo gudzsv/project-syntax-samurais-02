@@ -9,6 +9,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 99;
 }
 .backdrop.is-open {
   opacity: 1;
@@ -30,7 +31,6 @@
   width: 343px;
   min-height: 276px;
   background-color: var(--Background);
-  /* z-index: 9999; */
 }
 @media only screen and (min-width: 768px) {
   .modal-window {
