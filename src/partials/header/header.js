@@ -13,6 +13,12 @@ menuList.addEventListener('click', handleMenuClick);
 orderBtn.addEventListener('click', handleCloseClick);
 burgerMenuList.addEventListener('click', handleCloseClick);
 
+document.body.addEventListener('click', event => {
+    if (!menuList.classList.contains('visually-hidden') && !event.target.classList.contains('menu-link')) {
+        handleMenuClick();
+    }
+})
+
 document.addEventListener('keydown', event => {
     if (event.key ==='Escape' && !menuList.classList.contains('visually-hidden')) {
         handleMenuClick();
