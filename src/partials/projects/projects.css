@@ -2,13 +2,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  
+
 }
 .project-card {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
-  overflow: hidden;  
+  overflow: hidden;
   height: auto;
 }
 @keyframes slideLeftToRight {
@@ -54,7 +54,7 @@ line-height: 19.36px;
 letter-spacing: -0.02em;
 text-align: left;
 
-  
+
 }
 .right-part {
   flex: 1;
@@ -62,7 +62,7 @@ text-align: left;
   padding: 100px 16px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .project-card .right-part img {
   max-width: 100%;
@@ -129,21 +129,12 @@ text-align: left;
 }
 
 .projects-header {
-  font-family: Inter Tight;
-font-size: 16px;
-font-weight: 600;
-line-height: 24px;
-letter-spacing: -0.02em;
-text-align: left;
-color: #FAFAFA66;
-}
-.projects-header {
   margin-bottom: 64px;
 }
 .project-swiper-btn {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   width: 52px;
   height: 52px;
   padding: 14px;
@@ -151,7 +142,7 @@ color: #FAFAFA66;
   border-radius: 60px;
   border: 1px solid #FAFAFA80;
   background-color: transparent;
-  fill: none; 
+  fill: none;
   stroke: #fafafa;
 }
 .project-swiper-btn:disabled {
@@ -166,7 +157,7 @@ color: #FAFAFA66;
 .project-swiper-btn:not([disabled]):hover .project-btn-icon,
 .project-swiper-btn:not([disabled]):focus .project-btn-icon {
   stroke: #E0373F;
-  
+
 }
 
 /* =============TABLET====================== */
@@ -196,7 +187,7 @@ color: #FAFAFA66;
     width: 32px;
     height: 32px;
   }
-  .project-swiper-btn { 
+  .project-swiper-btn {
     width: 68px;
     height: 68px;
     padding: 18px;
