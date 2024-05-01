@@ -117,16 +117,18 @@ line-height: 19.36px;
 letter-spacing: -0.02em;
 text-align: left;
 }
+
 .projects-swiper-btns {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 .projects {
-  margin-bottom: 64px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .projects-header {
@@ -139,7 +141,7 @@ text-align: left;
 color: #FAFAFA66;
 }
 .projects-header {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 .project-swiper-btn {
   display: flex; 
@@ -205,6 +207,9 @@ color: #FAFAFA66;
   .project-swiper-btns {
     gap: 20px;
   }
+  .projects-swiper-btns {
+    margin-bottom: 96px;
+  }
 }
 
 /* ===================DESKTOP 1440===================== */
@@ -221,4 +226,7 @@ color: #FAFAFA66;
     height: auto;
     padding: 120px 37px;
    }
+   .projects-swiper-btns {
+    margin-bottom: 164x;
+  }
 }
