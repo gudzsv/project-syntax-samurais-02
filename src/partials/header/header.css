@@ -148,11 +148,13 @@ color: rgb(237, 59, 68);
       letter-spacing: -0.02em;
       animation-duration: 1s;
       animation-name: slidein;
-      transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
   .order-btn:hover {
       background-color: rgb(224, 55, 63);
+      scale: 1.05;
       }
     
   .order-btn:focus {
