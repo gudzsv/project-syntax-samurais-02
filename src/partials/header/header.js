@@ -10,8 +10,15 @@ const burgerMenuList = document.querySelector('.burger-menu-list');
 menuBtn.addEventListener('click', handleMenuClick);
 burgerBtn.addEventListener('click', handleBurgerClick);
 closeBtn.addEventListener('click', handleCloseClick);
+menuList.addEventListener('click', handleMenuClick);
 orderBtn.addEventListener('click', handleCloseClick);
 burgerMenuList.addEventListener('click', handleCloseClick);
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        handleMenuClick();
+    }
+})
 
 const dropDownKeyframes = new KeyframeEffect(
     menuList,
@@ -71,8 +78,8 @@ const closeBurgerAnimation = new Animation(
     document.timeline
 )
 
-function handleMenuClick() {
-    
+function handleMenuClick(event) {
+    console.log(event.currentTarget);
     if (menuList.classList.contains('visually-hidden')) {
         dropDownAnimation.play();
         menuList.classList.remove('visually-hidden');
