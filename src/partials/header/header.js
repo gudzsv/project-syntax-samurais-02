@@ -1,4 +1,3 @@
-// console.log('HEADER');
 const menuBtn = document.querySelector('.menu-link');
 const menuList = document.querySelector('.menu-list')
 const burgerBtn = document.querySelector('.burger-btn');
